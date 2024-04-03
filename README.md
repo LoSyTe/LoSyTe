@@ -1,12 +1,12 @@
 # DeLoSo
 ## [Logic Synthesis Tools Testing via Configuration Diversification with Combinatorial Multi-Armed Bandit](https://github.com/LoSyTe/LoSyTe)
 **The logic synthesis tools we tested include:**
-1. **Commercial Logic Synthesis Tool Vivado (latest version 2023.1)**
+1. **Commercial Logic Synthesis Tool Vivado (latest version 2023.1 and 2023.2)**
 2. **Open Source Logic Synthesis Tool Yosys (latest version 0.30 + 48)**
 ***
 
 **Env dependencies:**
-1. **Vivado 2023.1**
+1. **Vivado 2023.1 and 2023.2**
 2. **Yosys 0.30 + 48**
 3. **Icarus Verilog 13.0**
 4. **Verismith 1.0.0.2**
@@ -18,7 +18,7 @@
 ***
 
 ### Our Works
-Logic synthesis tools are the core components of digital circuit design, which  convert programs written in hardware description languages into gate-level netlists, and optimize the netlists. However, the netlist optimization is complex, with numerous optimization parameters to be configured. Any minor optimization bugs in logic synthesis tools may cause circuit diagrams to significantly deviate from the original design, posing risks in target systems. To this end, we propose DeLoSo, the first method for DEtecting LOgic Synthesis Optimization bugs. DeLoSo relies on netlist differences and parameter variations to guide the generation of diverse logic synthesis optimization configuration (LSOC) combinations to thoroughly test the optimization process. DeLoSo consists of three components: a LSOC generator, which generates diverse LSOC combinations through configuration recombination and mutation; a LSOC diversity evaluator, which assesses the diversity of optimization configurations; and a LSOC validator, which validates the generated LSOC combinations to discover optimization bugs. In two months, DeLoSo identified 19 bugs in two established logic synthesis tools (i.e., Vivado and Yosys); 15 of them have been fixed by vendors. 
+The complexity of circuit design continues to increase. It becomes particularly crucial to ensure the accuracy and reliability of logic synthesis tools. These tools efficiently convert hardware description languages into optimized gate-level netlists. However, inherent faults may cause failures in the synthesis process, which affects the accuracy of the generated netlists. In traditional approaches, the testing of logic synthesis tools has predominantly depended on code generators for test-program generation. However, the success of these methods is significantly influenced by the suitability of generator configurations. For an effective test configuration, it must produce test programs that are both bug-revealing (i.e., capable of triggering bugs) and diverse (i.e., ensuring the detection of various bug types). To achieve this goal, we propose LoSyTe: Logic Synthesis Tools Testing via Configuration Diversification with Combinatorial Multi-Armed Bandit. LoSyTe conducts comprehensive testing of logic synthesis tools through dynamic optimization of test-program generator configurations. It consists of three main components. Configuration selection component applies a multi-armed bandit algorithm to select and optimize configuration combinations based on test feedback. Test-program vectorization component turns test-programs into feature vectors to quantify test diversity. Equivalence checking component checks the consistency of synthesized netlists with Verilog tests, to identify synthesis faults and guide strategy adjustments. We assess LoSyTe on both proprietary commercial logic synthesis tools (i.e., Vivado)  and open-source logic synthesis tools (i.e., Yosys). The results show that LoSyTe successfully discovered 20 bugs of 4 types; all the reported bugs have been confirmed or fixed by developers.
 
 ***
 ### Main File
@@ -46,46 +46,48 @@ This folder encompasses optimization bugs discovered in the Vivado and Yosys log
 ***
 
 ### Here are the details of these bugs
-These errors in the error file can be reproduced using Vivado 2023.1 and Yosys 0.30+48.
+These errors in the error file can be reproduced using Vivado 2023.1, 2023.2 and Yosys 0.30+48.
 
 You can find all bug files in path `method/optimization bugs`.
 
-bug1：vivado	7AD9ZWSA1	 Incorrect Functionality of unsigned() System Function Due to  Synthesis Parameters.
+Fault1：vivado	7BrmgwSAB	 HARTHOptPost::optimize() function triggers a crash during Vivado synthesis.
 
-bug2：vivado	7EruaNSAR  An error occurred in the evaluation, resulting in incorrect simulation results.
+Fault2：vivado	7jBos5SAC  Synthesis failure due to an unexpected fault in the HARTGLAddGen() function.
 
-bug3：vivado	7Dv91gSAB	 Inconsistency Issue Arising from Interactions of Parameters like max_bram and max_uram.
+Fault3：vivado	7jBooqSAC	 Error invoking Tcl\_Panic function, triggering synthesis termination.
 
-bug4：vivado	7D1KRBSA3	 Bitwise XOR Operation Error Occurs During Synthesis of Design File Due to Custom Parameters.
+Fault4：vivado	7mhiM4SAI	 Synthesis failure is encountered as a consequence of a crash initiated by the NBaseModC::realModule()function.
 
-bug5：vivado	7PhRiCSAV	 Signal and expression splicing errors occur during synthesis.
+Fault5：vivado	7hvpQPSAY	 The HARTOptMux::findEnc() function triggers a Vivado crash, resulting in synthesis failure.
 
-bug6：vivado	7UmkalSAB	 Shift Operation Error Occurs in the Synthesis Process.
+Fault6：vivado	7HkoVvSAJ	 The HARTNDb::elaborate function triggered a Vivado crash, causing the synthesis to fail.
 
-bug7：vivado	7UmkM2SAJ	 The synthesis parameter shreg_min_size causes errors in the simulation results.
+Fault7：vivado	7k0SoLSAU	 Vivado synthesis failure is attributed to a crash triggered by the ConstProp::evaluate() function.
 
-bug8：vivado	7ZIdZvSAL	 The parameter "flatten_hierarchy" during logic synthesis leads to incorrect simulation results.
+Fault8：vivado	7k0StYSAU	 The NPinC::parentModule() function is causing Vivado to crash.
 
-bug9：vivado	7Bso9aSAB	 Function BDD::operator~() causing Vivado crash, leading to synthesis process interruption.
+Fault9：vivado	7lpEt6SAE	 Vivado synthesis is hitting a roadblock with a crash initiated by the HARTHOptPost::prepDsps() function.
 
-bug10：vivado	7EtNRRSA3	 Crashes During Synthesis, Involving Function HARTNDb::map() in Vivado.
+Fault10：vivado	7rbE4ISAU	 Vivado Synthesis Crashes and Unable to Locate Problematic Function in Log Files.
 
-bug11：vivado	7Dvx95SAB	 GLogicGenerate::createFunctionForBinary function causes synthesis interruption.
+Fault11：vivado	7lRrQrSAK	 The HARTNDb::constProp() function is provoking a Vivado crash.
 
-bug12：vivado	7HnIsxSAF	 Function optimizePass2() terminates the synthesis process prematurely.
+Fault12：vivado	7yJmiPSAS	 Vivado Synthesis Crashes and Unable to Locate Problematic Function in Log Files.
 
-bug13：yosys	   3848	     Optimization passes such as opt_clean and opt_reduce  has resulted in errors in register assignment.
+Fault13：vivado	7p4vsSSAQ	 Synthesis is failing due to an fault within the DFNode::findDFPin() function.
 
-bug14：yosys	   3867	     Inconsistency Issue in Synthesis and Simulation Results with  opt_expr -fine Pass.
+Fault14：vivado	7iVNTSSA4	 When synthesizing, an fault occurs in the SPinArray::createBus() function.
 
-bug15：yosys	   4160	   BUG：Issue in Yosys Synthesis: 'std::length_error' Leads to Termination.
+Fault15：vivado	7lRrQrSAK	 The exception in the HRTInvoker::inProcessLaunch() function results in synthesis failure.
 
-bug16：vivado	7Ogcx6SAB	 The control_set_opt_threshold  Parameters Resulted in Inversion Operation Error.
+Fault16：vivado	7ZIdXVSA1	 Inconsistent Simulation Results Due to Logic Synthesis Optimization Issue.
 
-bug17：yosys	   3895	     Inconsistency Issue with Continuous Assignment Error after FSM Optimization using opt_dff.
+Fault17：yosys	   4079	   Issue in Yosys Synthesis: 'std::length\_fault' Leads to Termination.
 
-bug18：yosys	   4010		   Synthesis optimization error, inconsistent simulation results.
+Fault18：yosys	   4056	   Long runtime and high memory usage for synth.
 
-bug19：yosys	   3876	     Memory overflow leading to Yosys crash.
+Fault19：yosys	   4071	   Assertion Failure in AST Processing during Verilog Synthesi.
+
+Fault20：yosys	   4077	   Yosys Verilog Parsing fault: Issue in AST Generation.
 ***
 **We've had so much help from Vivado and Yosys staff in finding and confirming bugs. I would like to express my gratitude here.**
