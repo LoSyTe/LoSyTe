@@ -38,7 +38,7 @@ Contains the implementation of the five comparison algorithms used in this study
 
 3.The "Faults" folder:
 
-Includes the defects discovered in the Vivado and Yosys logic synthesis tools. Each error file comes with a bug_description.pdf detailing the conditions that trigger the fault and an explanation of the error.
+Includes the defects discovered in the Vivado and Yosys logic synthesis tools. Each error file comes with a fault_description.pdf detailing the conditions that trigger the fault and an explanation of the error.
 ***
 
 ### Here are the details of these bugs
