@@ -24,25 +24,21 @@ The complexity of circuit design continues to increase. It becomes particularly 
 ### Main File
 Our methodology is located in the 'method' directory:
 
-1.DeLoSoforVivado folder:
+1.The "LoSyTe_method" directory features our proposed LoSyTe algorithm's implementation, which includes:
 
-This folder includes DeLoSoforVivado.py and DeLoSoforVivado_main.py files. DeLoSoforVivado.py comprises our LSOC (Loop Structure Obfuscation Criteria) generator and LSOC diversity evaluator, while DeLoSoforVivado_main.py incorporates the LSOC validator. The main function is also embedded in DeLoSoforVivado_main.py. By assigning the actual test case path to the variable 'files_path' in line 38 and executing the DeLoSoforVivado_main.py file, we can conduct testing on optimization bugs in Vivado. 
+(1)LoSyTe.py: The main function and the first component (Configuration selection component) for dynamic parameter configuration acquisition.
+(2)get_reward.py: Evaluates each round's parameter configuration, incorporating the second (Test-program vectorization component) and third components (Equivalence checking component).
+(3)get_feature.py: Calculates feature vectors for each test program.
+(4)get_faults_number.py: Counts the number of faults discovered in the test programs generated each round.
+(5)config.toml and config_update.py: config.toml is the parameter configuration file, and config_update.py updates this file with the latest parameter configuration combinations after each round.
 
-2.DeLoSoforYosys folder:
+2.The "Baseline" folder:
 
-This folder contains DeLoSoforYosys.py and DeLoSoforYosys_main.py files. Similarly, by executing the DeLoSoforYosys_main.py file, we can conduct testing on optimization bugs in Yosys.
+Contains the implementation of the five comparison algorithms used in this study: Default, Swarm, HIS, RECORD, and MCS.
 
-3.baseline folder:
+3.The "Faults" folder:
 
-This folder contains the implementations of the three comparison algorithms used in the baseline of this paper, which are Default, InitSwarm, and DynSwarm. 
-
-4.example folder:
-
-This folder contains two test cases automatically generated using the Verismith tool. In our experiments, all test cases are program codes generated through the Verismith tool.
-
-5.optimization bugs folder:
-
-This folder encompasses optimization bugs discovered in the Vivado and Yosys logic synthesis tools. Each bug file includes a bug_description.pdf, providing details on the triggering conditions and an explanation of the bug issues.
+Includes the defects discovered in the Vivado and Yosys logic synthesis tools. Each error file comes with a bug_description.pdf detailing the conditions that trigger the fault and an explanation of the error.
 ***
 
 ### Here are the details of these bugs
