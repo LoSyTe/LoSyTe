@@ -1,0 +1,3169 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.30+48 (git sha1 14d50a176, clang 14.0.0-1ubuntu1 -fPIC -Os)
+
+
+-- Running command `read_verilog rtl.v; synth; write_verilog -noattr syn_yosys.v' --
+
+1. Executing Verilog-2005 frontend: rtl.v
+Parsing Verilog input from `rtl.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 3 switch rules as full_case in process $proc$rtl.v:731$642 in module top.
+Marked 4 switch rules as full_case in process $proc$rtl.v:579$303 in module top.
+Marked 1 switch rules as full_case in process $proc$rtl.v:530$267 in module top.
+Marked 3 switch rules as full_case in process $proc$rtl.v:335$40 in module top.
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 23 redundant assignments.
+Promoted 269 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\top.$proc$rtl.v:170$878'.
+  Set init value: \reg6 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:169$877'.
+  Set init value: \forvar7 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:168$876'.
+  Set init value: \reg8 = 15'000000000000000
+Found init rule in `\top.$proc$rtl.v:167$875'.
+  Set init value: \reg9 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:166$874'.
+  Set init value: \forvar10 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:165$873'.
+  Set init value: \reg11 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:164$872'.
+  Set init value: \reg12 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:163$871'.
+  Set init value: \reg10 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:162$870'.
+  Set init value: \reg13 = 15'000000000000000
+Found init rule in `\top.$proc$rtl.v:161$869'.
+  Set init value: \reg14 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:160$868'.
+  Set init value: \reg15 = 4'0000
+Found init rule in `\top.$proc$rtl.v:159$867'.
+  Set init value: \reg16 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:158$866'.
+  Set init value: \reg17 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:157$865'.
+  Set init value: \forvar18 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:156$864'.
+  Set init value: \reg19 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:155$863'.
+  Set init value: \reg20 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:154$862'.
+  Set init value: \reg21 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:153$861'.
+  Set init value: \forvar22 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:152$860'.
+  Set init value: \forvar23 = 6'000000
+Found init rule in `\top.$proc$rtl.v:151$859'.
+  Set init value: \reg24 = 6'000000
+Found init rule in `\top.$proc$rtl.v:150$858'.
+  Set init value: \reg25 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:149$857'.
+  Set init value: \reg26 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:148$856'.
+  Set init value: \reg27 = 13'0000000000000
+Found init rule in `\top.$proc$rtl.v:147$855'.
+  Set init value: \reg28 = 17'00000000000000000
+Found init rule in `\top.$proc$rtl.v:146$854'.
+  Set init value: \forvar29 = 17'00000000000000000
+Found init rule in `\top.$proc$rtl.v:145$853'.
+  Set init value: \reg30 = 6'000000
+Found init rule in `\top.$proc$rtl.v:144$852'.
+  Set init value: \reg31 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:143$851'.
+  Set init value: \reg32 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:142$850'.
+  Set init value: \reg33 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:141$849'.
+  Set init value: \reg34 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:140$848'.
+  Set init value: \forvar35 = 6'000000
+Found init rule in `\top.$proc$rtl.v:139$847'.
+  Set init value: \reg36 = 3'000
+Found init rule in `\top.$proc$rtl.v:138$846'.
+  Set init value: \reg37 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:137$845'.
+  Set init value: \reg38 = 5'00000
+Found init rule in `\top.$proc$rtl.v:136$844'.
+  Set init value: \reg39 = 13'0000000000000
+Found init rule in `\top.$proc$rtl.v:135$843'.
+  Set init value: \forvar40 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:134$842'.
+  Set init value: \reg41 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:133$841'.
+  Set init value: \reg42 = 5'00000
+Found init rule in `\top.$proc$rtl.v:132$840'.
+  Set init value: \reg43 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:131$839'.
+  Set init value: \reg44 = 6'000000
+Found init rule in `\top.$proc$rtl.v:130$838'.
+  Set init value: \reg45 = 4'0000
+Found init rule in `\top.$proc$rtl.v:129$837'.
+  Set init value: \forvar46 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:128$836'.
+  Set init value: \reg47 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:127$835'.
+  Set init value: \reg48 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:126$834'.
+  Set init value: \reg49 = 3'000
+Found init rule in `\top.$proc$rtl.v:125$833'.
+  Set init value: \reg50 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:124$832'.
+  Set init value: \reg51 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:123$831'.
+  Set init value: \forvar52 = 15'000000000000000
+Found init rule in `\top.$proc$rtl.v:122$830'.
+  Set init value: \reg53 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:121$829'.
+  Set init value: \reg54 = 4'0000
+Found init rule in `\top.$proc$rtl.v:120$828'.
+  Set init value: \reg55 = 6'000000
+Found init rule in `\top.$proc$rtl.v:119$827'.
+  Set init value: \reg56 = 6'000000
+Found init rule in `\top.$proc$rtl.v:118$826'.
+  Set init value: \forvar57 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:117$825'.
+  Set init value: \reg58 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:116$824'.
+  Set init value: \reg59 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:115$823'.
+  Set init value: \reg60 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:114$822'.
+  Set init value: \reg61 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:113$821'.
+  Set init value: \reg62 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:108$816'.
+  Set init value: \forvar63 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:107$815'.
+  Set init value: \reg64 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:106$814'.
+  Set init value: \reg65 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:105$813'.
+  Set init value: \reg66 = 10'0000000000
+Found init rule in `\top.$proc$rtl.v:104$812'.
+  Set init value: \forvar67 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:103$811'.
+  Set init value: \reg68 = 20'00000000000000000000
+Found init rule in `\top.$proc$rtl.v:102$810'.
+  Set init value: \reg69 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:101$809'.
+  Set init value: \forvar70 = 6'000000
+Found init rule in `\top.$proc$rtl.v:100$808'.
+  Set init value: \reg71 = 10'0000000000
+Found init rule in `\top.$proc$rtl.v:99$807'.
+  Set init value: \reg72 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:98$806'.
+  Set init value: \reg73 = 3'000
+Found init rule in `\top.$proc$rtl.v:97$805'.
+  Set init value: \reg74 = 4'0000
+Found init rule in `\top.$proc$rtl.v:96$804'.
+  Set init value: \reg63 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:95$803'.
+  Set init value: \forvar75 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:91$800'.
+  Set init value: \reg79 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:90$799'.
+  Set init value: \reg80 = 17'00000000000000000
+Found init rule in `\top.$proc$rtl.v:89$798'.
+  Set init value: \reg81 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:88$797'.
+  Set init value: \reg82 = 4'0000
+Found init rule in `\top.$proc$rtl.v:86$796'.
+  Set init value: \forvar84 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:85$795'.
+  Set init value: \reg85 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:84$794'.
+  Set init value: \forvar86 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:83$793'.
+  Set init value: \reg87 = 7'0000000
+Found init rule in `\top.$proc$rtl.v:82$792'.
+  Set init value: \reg88 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:81$791'.
+  Set init value: \reg89 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:80$790'.
+  Set init value: \reg90 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:79$789'.
+  Set init value: \reg91 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:78$788'.
+  Set init value: \reg92 = 5'00000
+Found init rule in `\top.$proc$rtl.v:77$787'.
+  Set init value: \reg93 = 3'000
+Found init rule in `\top.$proc$rtl.v:76$786'.
+  Set init value: \reg94 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:75$785'.
+  Set init value: \reg95 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:74$784'.
+  Set init value: \forvar96 = 17'00000000000000000
+Found init rule in `\top.$proc$rtl.v:73$783'.
+  Set init value: \forvar97 = 9'000000000
+Found init rule in `\top.$proc$rtl.v:72$782'.
+  Set init value: \reg98 = 17'00000000000000000
+Found init rule in `\top.$proc$rtl.v:71$781'.
+  Set init value: \forvar99 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:69$779'.
+  Set init value: \reg101 = 6'000000
+Found init rule in `\top.$proc$rtl.v:68$778'.
+  Set init value: \forvar102 = 5'00000
+Found init rule in `\top.$proc$rtl.v:67$777'.
+  Set init value: \reg103 = 6'000000
+Found init rule in `\top.$proc$rtl.v:66$776'.
+  Set init value: \forvar104 = 4'0000
+Found init rule in `\top.$proc$rtl.v:65$775'.
+  Set init value: \reg105 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:64$774'.
+  Set init value: \reg106 = 14'00000000000000
+Found init rule in `\top.$proc$rtl.v:63$773'.
+  Set init value: \forvar107 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:62$772'.
+  Set init value: \reg108 = 10'0000000000
+Found init rule in `\top.$proc$rtl.v:61$771'.
+  Set init value: \reg109 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:60$770'.
+  Set init value: \forvar110 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:59$769'.
+  Set init value: \forvar111 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:58$768'.
+  Set init value: \reg112 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:57$767'.
+  Set init value: \reg113 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:56$766'.
+  Set init value: \reg114 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:55$765'.
+  Set init value: \reg115 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:54$764'.
+  Set init value: \reg116 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:53$763'.
+  Set init value: \forvar117 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:47$757'.
+  Set init value: \reg123 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:46$756'.
+  Set init value: \forvar124 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:45$755'.
+  Set init value: \forvar125 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:44$754'.
+  Set init value: \reg126 = 4'0000
+Found init rule in `\top.$proc$rtl.v:43$753'.
+  Set init value: \reg127 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:42$752'.
+  Set init value: \reg128 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:41$751'.
+  Set init value: \reg129 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:40$750'.
+  Set init value: \reg130 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:39$749'.
+  Set init value: \forvar131 = 18'000000000000000000
+Found init rule in `\top.$proc$rtl.v:38$748'.
+  Set init value: \reg132 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:37$747'.
+  Set init value: \reg133 = 8'00000000
+Found init rule in `\top.$proc$rtl.v:36$746'.
+  Set init value: \reg134 = 7'0000000
+Found init rule in `\top.$proc$rtl.v:35$745'.
+  Set init value: \forvar135 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:31$741'.
+  Set init value: \reg139 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:30$740'.
+  Set init value: \reg140 = 7'0000000
+Found init rule in `\top.$proc$rtl.v:29$739'.
+  Set init value: \forvar141 = 3'000
+Found init rule in `\top.$proc$rtl.v:28$738'.
+  Set init value: \reg142 = 6'000000
+Found init rule in `\top.$proc$rtl.v:27$737'.
+  Set init value: \reg143 = 21'000000000000000000000
+Found init rule in `\top.$proc$rtl.v:26$736'.
+  Set init value: \reg144 = 5'00000
+Found init rule in `\top.$proc$rtl.v:25$735'.
+  Set init value: \reg145 = 10'0000000000
+Found init rule in `\top.$proc$rtl.v:24$734'.
+  Set init value: \reg146 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:23$733'.
+  Set init value: \forvar140 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:22$732'.
+  Set init value: \reg141 = 19'0000000000000000000
+Found init rule in `\top.$proc$rtl.v:21$731'.
+  Set init value: \reg147 = 5'00000
+Found init rule in `\top.$proc$rtl.v:20$730'.
+  Set init value: \forvar148 = 6'000000
+Found init rule in `\top.$proc$rtl.v:19$729'.
+  Set init value: \reg149 = 3'000
+Found init rule in `\top.$proc$rtl.v:18$728'.
+  Set init value: \forvar150 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:17$727'.
+  Set init value: \reg151 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:16$726'.
+  Set init value: \reg152 = 12'000000000000
+Found init rule in `\top.$proc$rtl.v:15$725'.
+  Set init value: \reg153 = 16'0000000000000000
+Found init rule in `\top.$proc$rtl.v:14$724'.
+  Set init value: \reg154 = 22'0000000000000000000000
+Found init rule in `\top.$proc$rtl.v:13$723'.
+  Set init value: \reg155 = 4'0000
+Found init rule in `\top.$proc$rtl.v:12$722'.
+  Set init value: \reg156 = 11'00000000000
+Found init rule in `\top.$proc$rtl.v:11$721'.
+  Set init value: \reg157 = 13'0000000000000
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~11 debug messages>
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\top.$proc$rtl.v:170$878'.
+Creating decoders for process `\top.$proc$rtl.v:169$877'.
+Creating decoders for process `\top.$proc$rtl.v:168$876'.
+Creating decoders for process `\top.$proc$rtl.v:167$875'.
+Creating decoders for process `\top.$proc$rtl.v:166$874'.
+Creating decoders for process `\top.$proc$rtl.v:165$873'.
+Creating decoders for process `\top.$proc$rtl.v:164$872'.
+Creating decoders for process `\top.$proc$rtl.v:163$871'.
+Creating decoders for process `\top.$proc$rtl.v:162$870'.
+Creating decoders for process `\top.$proc$rtl.v:161$869'.
+Creating decoders for process `\top.$proc$rtl.v:160$868'.
+Creating decoders for process `\top.$proc$rtl.v:159$867'.
+Creating decoders for process `\top.$proc$rtl.v:158$866'.
+Creating decoders for process `\top.$proc$rtl.v:157$865'.
+Creating decoders for process `\top.$proc$rtl.v:156$864'.
+Creating decoders for process `\top.$proc$rtl.v:155$863'.
+Creating decoders for process `\top.$proc$rtl.v:154$862'.
+Creating decoders for process `\top.$proc$rtl.v:153$861'.
+Creating decoders for process `\top.$proc$rtl.v:152$860'.
+Creating decoders for process `\top.$proc$rtl.v:151$859'.
+Creating decoders for process `\top.$proc$rtl.v:150$858'.
+Creating decoders for process `\top.$proc$rtl.v:149$857'.
+Creating decoders for process `\top.$proc$rtl.v:148$856'.
+Creating decoders for process `\top.$proc$rtl.v:147$855'.
+Creating decoders for process `\top.$proc$rtl.v:146$854'.
+Creating decoders for process `\top.$proc$rtl.v:145$853'.
+Creating decoders for process `\top.$proc$rtl.v:144$852'.
+Creating decoders for process `\top.$proc$rtl.v:143$851'.
+Creating decoders for process `\top.$proc$rtl.v:142$850'.
+Creating decoders for process `\top.$proc$rtl.v:141$849'.
+Creating decoders for process `\top.$proc$rtl.v:140$848'.
+Creating decoders for process `\top.$proc$rtl.v:139$847'.
+Creating decoders for process `\top.$proc$rtl.v:138$846'.
+Creating decoders for process `\top.$proc$rtl.v:137$845'.
+Creating decoders for process `\top.$proc$rtl.v:136$844'.
+Creating decoders for process `\top.$proc$rtl.v:135$843'.
+Creating decoders for process `\top.$proc$rtl.v:134$842'.
+Creating decoders for process `\top.$proc$rtl.v:133$841'.
+Creating decoders for process `\top.$proc$rtl.v:132$840'.
+Creating decoders for process `\top.$proc$rtl.v:131$839'.
+Creating decoders for process `\top.$proc$rtl.v:130$838'.
+Creating decoders for process `\top.$proc$rtl.v:129$837'.
+Creating decoders for process `\top.$proc$rtl.v:128$836'.
+Creating decoders for process `\top.$proc$rtl.v:127$835'.
+Creating decoders for process `\top.$proc$rtl.v:126$834'.
+Creating decoders for process `\top.$proc$rtl.v:125$833'.
+Creating decoders for process `\top.$proc$rtl.v:124$832'.
+Creating decoders for process `\top.$proc$rtl.v:123$831'.
+Creating decoders for process `\top.$proc$rtl.v:122$830'.
+Creating decoders for process `\top.$proc$rtl.v:121$829'.
+Creating decoders for process `\top.$proc$rtl.v:120$828'.
+Creating decoders for process `\top.$proc$rtl.v:119$827'.
+Creating decoders for process `\top.$proc$rtl.v:118$826'.
+Creating decoders for process `\top.$proc$rtl.v:117$825'.
+Creating decoders for process `\top.$proc$rtl.v:116$824'.
+Creating decoders for process `\top.$proc$rtl.v:115$823'.
+Creating decoders for process `\top.$proc$rtl.v:114$822'.
+Creating decoders for process `\top.$proc$rtl.v:113$821'.
+Creating decoders for process `\top.$proc$rtl.v:112$820'.
+Creating decoders for process `\top.$proc$rtl.v:111$819'.
+Creating decoders for process `\top.$proc$rtl.v:110$818'.
+Creating decoders for process `\top.$proc$rtl.v:109$817'.
+Creating decoders for process `\top.$proc$rtl.v:108$816'.
+Creating decoders for process `\top.$proc$rtl.v:107$815'.
+Creating decoders for process `\top.$proc$rtl.v:106$814'.
+Creating decoders for process `\top.$proc$rtl.v:105$813'.
+Creating decoders for process `\top.$proc$rtl.v:104$812'.
+Creating decoders for process `\top.$proc$rtl.v:103$811'.
+Creating decoders for process `\top.$proc$rtl.v:102$810'.
+Creating decoders for process `\top.$proc$rtl.v:101$809'.
+Creating decoders for process `\top.$proc$rtl.v:100$808'.
+Creating decoders for process `\top.$proc$rtl.v:99$807'.
+Creating decoders for process `\top.$proc$rtl.v:98$806'.
+Creating decoders for process `\top.$proc$rtl.v:97$805'.
+Creating decoders for process `\top.$proc$rtl.v:96$804'.
+Creating decoders for process `\top.$proc$rtl.v:95$803'.
+Creating decoders for process `\top.$proc$rtl.v:94$802'.
+Creating decoders for process `\top.$proc$rtl.v:93$801'.
+Creating decoders for process `\top.$proc$rtl.v:91$800'.
+Creating decoders for process `\top.$proc$rtl.v:90$799'.
+Creating decoders for process `\top.$proc$rtl.v:89$798'.
+Creating decoders for process `\top.$proc$rtl.v:88$797'.
+Creating decoders for process `\top.$proc$rtl.v:86$796'.
+Creating decoders for process `\top.$proc$rtl.v:85$795'.
+Creating decoders for process `\top.$proc$rtl.v:84$794'.
+Creating decoders for process `\top.$proc$rtl.v:83$793'.
+Creating decoders for process `\top.$proc$rtl.v:82$792'.
+Creating decoders for process `\top.$proc$rtl.v:81$791'.
+Creating decoders for process `\top.$proc$rtl.v:80$790'.
+Creating decoders for process `\top.$proc$rtl.v:79$789'.
+Creating decoders for process `\top.$proc$rtl.v:78$788'.
+Creating decoders for process `\top.$proc$rtl.v:77$787'.
+Creating decoders for process `\top.$proc$rtl.v:76$786'.
+Creating decoders for process `\top.$proc$rtl.v:75$785'.
+Creating decoders for process `\top.$proc$rtl.v:74$784'.
+Creating decoders for process `\top.$proc$rtl.v:73$783'.
+Creating decoders for process `\top.$proc$rtl.v:72$782'.
+Creating decoders for process `\top.$proc$rtl.v:71$781'.
+Creating decoders for process `\top.$proc$rtl.v:70$780'.
+Creating decoders for process `\top.$proc$rtl.v:69$779'.
+Creating decoders for process `\top.$proc$rtl.v:68$778'.
+Creating decoders for process `\top.$proc$rtl.v:67$777'.
+Creating decoders for process `\top.$proc$rtl.v:66$776'.
+Creating decoders for process `\top.$proc$rtl.v:65$775'.
+Creating decoders for process `\top.$proc$rtl.v:64$774'.
+Creating decoders for process `\top.$proc$rtl.v:63$773'.
+Creating decoders for process `\top.$proc$rtl.v:62$772'.
+Creating decoders for process `\top.$proc$rtl.v:61$771'.
+Creating decoders for process `\top.$proc$rtl.v:60$770'.
+Creating decoders for process `\top.$proc$rtl.v:59$769'.
+Creating decoders for process `\top.$proc$rtl.v:58$768'.
+Creating decoders for process `\top.$proc$rtl.v:57$767'.
+Creating decoders for process `\top.$proc$rtl.v:56$766'.
+Creating decoders for process `\top.$proc$rtl.v:55$765'.
+Creating decoders for process `\top.$proc$rtl.v:54$764'.
+Creating decoders for process `\top.$proc$rtl.v:53$763'.
+Creating decoders for process `\top.$proc$rtl.v:52$762'.
+Creating decoders for process `\top.$proc$rtl.v:51$761'.
+Creating decoders for process `\top.$proc$rtl.v:50$760'.
+Creating decoders for process `\top.$proc$rtl.v:49$759'.
+Creating decoders for process `\top.$proc$rtl.v:48$758'.
+Creating decoders for process `\top.$proc$rtl.v:47$757'.
+Creating decoders for process `\top.$proc$rtl.v:46$756'.
+Creating decoders for process `\top.$proc$rtl.v:45$755'.
+Creating decoders for process `\top.$proc$rtl.v:44$754'.
+Creating decoders for process `\top.$proc$rtl.v:43$753'.
+Creating decoders for process `\top.$proc$rtl.v:42$752'.
+Creating decoders for process `\top.$proc$rtl.v:41$751'.
+Creating decoders for process `\top.$proc$rtl.v:40$750'.
+Creating decoders for process `\top.$proc$rtl.v:39$749'.
+Creating decoders for process `\top.$proc$rtl.v:38$748'.
+Creating decoders for process `\top.$proc$rtl.v:37$747'.
+Creating decoders for process `\top.$proc$rtl.v:36$746'.
+Creating decoders for process `\top.$proc$rtl.v:35$745'.
+Creating decoders for process `\top.$proc$rtl.v:34$744'.
+Creating decoders for process `\top.$proc$rtl.v:33$743'.
+Creating decoders for process `\top.$proc$rtl.v:32$742'.
+Creating decoders for process `\top.$proc$rtl.v:31$741'.
+Creating decoders for process `\top.$proc$rtl.v:30$740'.
+Creating decoders for process `\top.$proc$rtl.v:29$739'.
+Creating decoders for process `\top.$proc$rtl.v:28$738'.
+Creating decoders for process `\top.$proc$rtl.v:27$737'.
+Creating decoders for process `\top.$proc$rtl.v:26$736'.
+Creating decoders for process `\top.$proc$rtl.v:25$735'.
+Creating decoders for process `\top.$proc$rtl.v:24$734'.
+Creating decoders for process `\top.$proc$rtl.v:23$733'.
+Creating decoders for process `\top.$proc$rtl.v:22$732'.
+Creating decoders for process `\top.$proc$rtl.v:21$731'.
+Creating decoders for process `\top.$proc$rtl.v:20$730'.
+Creating decoders for process `\top.$proc$rtl.v:19$729'.
+Creating decoders for process `\top.$proc$rtl.v:18$728'.
+Creating decoders for process `\top.$proc$rtl.v:17$727'.
+Creating decoders for process `\top.$proc$rtl.v:16$726'.
+Creating decoders for process `\top.$proc$rtl.v:15$725'.
+Creating decoders for process `\top.$proc$rtl.v:14$724'.
+Creating decoders for process `\top.$proc$rtl.v:13$723'.
+Creating decoders for process `\top.$proc$rtl.v:12$722'.
+Creating decoders for process `\top.$proc$rtl.v:11$721'.
+Creating decoders for process `\top.$proc$rtl.v:731$642'.
+     1/18: $1\reg154[21:0]
+     2/18: $1\reg153[15:0]
+     3/18: $0\reg152[11:0]
+     4/18: $1\reg155[3:0]
+     5/18: $1\reg156[10:0]
+     6/18: $2\reg144[4:0]
+     7/18: $2\reg145[9:0]
+     8/18: $2\reg147[4:0]
+     9/18: $1\forvar141[2:0]
+    10/18: $1\reg145[9:0]
+    11/18: $1\reg144[4:0]
+    12/18: $1\reg143[20:0]
+    13/18: $1\reg142[5:0]
+    14/18: $1\reg140[6:0]
+    15/18: $1\forvar140[10:0]
+    16/18: $1\reg141[18:0]
+    17/18: $1\reg147[4:0]
+    18/18: $0\reg146[10:0]
+Creating decoders for process `\top.$proc$rtl.v:659$532'.
+Creating decoders for process `\top.$proc$rtl.v:654$524'.
+Creating decoders for process `\top.$proc$rtl.v:579$303'.
+     1/9: $0\reg95[18:0]
+     2/9: $4\reg94[17:0]
+     3/9: $4\reg93[2:0]
+     4/9: $3\reg94[17:0]
+     5/9: $3\reg93[2:0]
+     6/9: $2\reg94[17:0]
+     7/9: $2\reg93[2:0]
+     8/9: $1\reg94[17:0]
+     9/9: $1\reg93[2:0]
+Creating decoders for process `\top.$proc$rtl.v:570$292'.
+Creating decoders for process `\top.$proc$rtl.v:530$267'.
+     1/13: $1\forvar70[5:0]
+     2/13: $1\reg72[15:0]
+     3/13: $1\forvar67[7:0]
+     4/13: $1\forvar63[20:0]
+     5/13: $0\reg64[18:0]
+     6/13: $0\reg65[21:0]
+     7/13: $0\reg66[9:0]
+     8/13: $0\reg68[19:0]
+     9/13: $0\reg69[11:0]
+    10/13: $0\reg71[9:0]
+    11/13: $0\reg73[2:0]
+    12/13: $0\reg74[3:0]
+    13/13: $0\reg63[8:0]
+Creating decoders for process `\top.$proc$rtl.v:335$40'.
+     1/46: $1\forvar57[21:0]
+     2/46: $1\reg62[18:0]
+     3/46: $0\reg61[18:0]
+     4/46: $0\reg60[18:0]
+     5/46: $1\reg59[13:0]
+     6/46: $0\reg58[15:0]
+     7/46: $1\forvar52[14:0]
+     8/46: $1\reg56[5:0]
+     9/46: $0\reg55[5:0]
+    10/46: $0\reg54[3:0]
+    11/46: $1\reg53[8:0]
+    12/46: $1\forvar46[7:0]
+    13/46: $0\reg51[7:0]
+    14/46: $1\reg50[8:0]
+    15/46: $1\reg49[2:0]
+    16/46: $1\reg48[21:0]
+    17/46: $0\reg47[20:0]
+    18/46: $1\forvar40[21:0]
+    19/46: $0\reg45[3:0]
+    20/46: $0\reg44[5:0]
+    21/46: $0\reg43[18:0]
+    22/46: $1\reg42[4:0]
+    23/46: $0\reg41[21:0]
+    24/46: $1\forvar35[5:0]
+    25/46: $1\reg39[12:0]
+    26/46: $0\reg38[4:0]
+    27/46: $1\reg37[13:0]
+    28/46: $0\reg36[2:0]
+    29/46: $2\reg14[20:0]
+    30/46: $2\reg16[13:0]
+    31/46: $0\reg12[8:0]
+    32/46: $1\forvar10[11:0]
+    33/46: $1\reg9[13:0]
+    34/46: $1\forvar7[11:0]
+    35/46: $0\reg8[14:0]
+    36/46: $1\reg10[18:0]
+    37/46: $1\reg14[20:0]
+    38/46: $1\reg16[13:0]
+    39/46: $1\forvar18[8:0]
+    40/46: $1\reg19[7:0]
+    41/46: $1\reg20[20:0]
+    42/46: $0\reg11[13:0]
+    43/46: $0\reg13[14:0]
+    44/46: $0\reg15[3:0]
+    45/46: $0\reg17[11:0]
+    46/46: $0\reg21[8:0]
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\top.\forvar37' from process `\top.$proc$rtl.v:112$820'.
+No latch inferred for signal `\top.\reg40' from process `\top.$proc$rtl.v:111$819'.
+No latch inferred for signal `\top.\forvar41' from process `\top.$proc$rtl.v:110$818'.
+No latch inferred for signal `\top.\reg46' from process `\top.$proc$rtl.v:109$817'.
+No latch inferred for signal `\top.\reg76' from process `\top.$proc$rtl.v:94$802'.
+No latch inferred for signal `\top.\reg77' from process `\top.$proc$rtl.v:93$801'.
+No latch inferred for signal `\top.\reg100' from process `\top.$proc$rtl.v:70$780'.
+No latch inferred for signal `\top.\forvar118' from process `\top.$proc$rtl.v:52$762'.
+No latch inferred for signal `\top.\reg119' from process `\top.$proc$rtl.v:51$761'.
+No latch inferred for signal `\top.\reg120' from process `\top.$proc$rtl.v:50$760'.
+No latch inferred for signal `\top.\reg121' from process `\top.$proc$rtl.v:49$759'.
+No latch inferred for signal `\top.\reg122' from process `\top.$proc$rtl.v:48$758'.
+No latch inferred for signal `\top.\reg136' from process `\top.$proc$rtl.v:34$744'.
+No latch inferred for signal `\top.\reg137' from process `\top.$proc$rtl.v:33$743'.
+No latch inferred for signal `\top.\reg138' from process `\top.$proc$rtl.v:32$742'.
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\top.\reg157' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1105' with positive edge clock.
+Creating register for signal `\top.\reg156' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1106' with positive edge clock.
+Creating register for signal `\top.\reg155' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1107' with positive edge clock.
+Creating register for signal `\top.\reg154' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1108' with positive edge clock.
+Creating register for signal `\top.\reg153' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1109' with positive edge clock.
+Creating register for signal `\top.\reg152' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1110' with positive edge clock.
+Creating register for signal `\top.\reg151' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1111' with positive edge clock.
+Creating register for signal `\top.\forvar150' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1112' with positive edge clock.
+Creating register for signal `\top.\reg149' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1113' with positive edge clock.
+Creating register for signal `\top.\forvar148' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1114' with positive edge clock.
+Creating register for signal `\top.\reg147' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1115' with positive edge clock.
+Creating register for signal `\top.\reg141' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1116' with positive edge clock.
+Creating register for signal `\top.\forvar140' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1117' with positive edge clock.
+Creating register for signal `\top.\reg146' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1118' with positive edge clock.
+Creating register for signal `\top.\reg145' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1119' with positive edge clock.
+Creating register for signal `\top.\reg144' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1120' with positive edge clock.
+Creating register for signal `\top.\reg143' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1121' with positive edge clock.
+Creating register for signal `\top.\reg142' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1122' with positive edge clock.
+Creating register for signal `\top.\forvar141' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1123' with positive edge clock.
+Creating register for signal `\top.\reg140' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1124' with positive edge clock.
+Creating register for signal `\top.\reg139' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1125' with positive edge clock.
+Creating register for signal `\top.\forvar135' using process `\top.$proc$rtl.v:731$642'.
+  created $dff cell `$procdff$1126' with positive edge clock.
+Creating register for signal `\top.\reg134' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1127' with positive edge clock.
+Creating register for signal `\top.\reg133' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1128' with positive edge clock.
+Creating register for signal `\top.\reg132' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1129' with positive edge clock.
+Creating register for signal `\top.\forvar131' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1130' with positive edge clock.
+Creating register for signal `\top.\reg130' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1131' with positive edge clock.
+Creating register for signal `\top.\reg129' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1132' with positive edge clock.
+Creating register for signal `\top.\reg128' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1133' with positive edge clock.
+Creating register for signal `\top.\reg127' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1134' with positive edge clock.
+Creating register for signal `\top.\reg126' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1135' with positive edge clock.
+Creating register for signal `\top.\forvar125' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1136' with positive edge clock.
+Creating register for signal `\top.\forvar124' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1137' with positive edge clock.
+Creating register for signal `\top.\reg123' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1138' with positive edge clock.
+Creating register for signal `\top.\forvar117' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1139' with positive edge clock.
+Creating register for signal `\top.\reg116' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1140' with positive edge clock.
+Creating register for signal `\top.\reg115' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1141' with positive edge clock.
+Creating register for signal `\top.\reg114' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1142' with positive edge clock.
+Creating register for signal `\top.\reg113' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1143' with positive edge clock.
+Creating register for signal `\top.\reg112' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1144' with positive edge clock.
+Creating register for signal `\top.\forvar111' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1145' with positive edge clock.
+Creating register for signal `\top.\forvar110' using process `\top.$proc$rtl.v:659$532'.
+  created $dff cell `$procdff$1146' with positive edge clock.
+Creating register for signal `\top.\reg109' using process `\top.$proc$rtl.v:654$524'.
+  created $dff cell `$procdff$1147' with positive edge clock.
+Creating register for signal `\top.\reg108' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1148' with positive edge clock.
+Creating register for signal `\top.\forvar107' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1149' with positive edge clock.
+Creating register for signal `\top.\reg106' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1150' with positive edge clock.
+Creating register for signal `\top.\reg105' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1151' with positive edge clock.
+Creating register for signal `\top.\forvar104' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1152' with positive edge clock.
+Creating register for signal `\top.\reg103' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1153' with positive edge clock.
+Creating register for signal `\top.\forvar102' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1154' with positive edge clock.
+Creating register for signal `\top.\reg101' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1155' with positive edge clock.
+Creating register for signal `\top.\forvar99' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1156' with positive edge clock.
+Creating register for signal `\top.\reg98' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1157' with positive edge clock.
+Creating register for signal `\top.\forvar97' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1158' with positive edge clock.
+Creating register for signal `\top.\forvar96' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1159' with positive edge clock.
+Creating register for signal `\top.\reg95' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1160' with positive edge clock.
+Creating register for signal `\top.\reg94' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1161' with positive edge clock.
+Creating register for signal `\top.\reg93' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1162' with positive edge clock.
+Creating register for signal `\top.\reg92' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1163' with positive edge clock.
+Creating register for signal `\top.\reg91' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1164' with positive edge clock.
+Creating register for signal `\top.\reg90' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1165' with positive edge clock.
+Creating register for signal `\top.\reg89' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1166' with positive edge clock.
+Creating register for signal `\top.\reg88' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1167' with positive edge clock.
+Creating register for signal `\top.\reg87' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1168' with positive edge clock.
+Creating register for signal `\top.\forvar86' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1169' with positive edge clock.
+Creating register for signal `\top.\reg85' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1170' with positive edge clock.
+Creating register for signal `\top.\forvar84' using process `\top.$proc$rtl.v:579$303'.
+  created $dff cell `$procdff$1171' with positive edge clock.
+Creating register for signal `\top.\reg82' using process `\top.$proc$rtl.v:570$292'.
+  created $dff cell `$procdff$1172' with positive edge clock.
+Creating register for signal `\top.\reg81' using process `\top.$proc$rtl.v:570$292'.
+  created $dff cell `$procdff$1173' with positive edge clock.
+Creating register for signal `\top.\reg80' using process `\top.$proc$rtl.v:570$292'.
+  created $dff cell `$procdff$1174' with positive edge clock.
+Creating register for signal `\top.\reg79' using process `\top.$proc$rtl.v:570$292'.
+  created $dff cell `$procdff$1175' with positive edge clock.
+Creating register for signal `\top.\forvar75' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1176' with positive edge clock.
+Creating register for signal `\top.\reg63' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1177' with positive edge clock.
+Creating register for signal `\top.\reg74' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1178' with positive edge clock.
+Creating register for signal `\top.\reg73' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1179' with positive edge clock.
+Creating register for signal `\top.\reg72' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1180' with positive edge clock.
+Creating register for signal `\top.\reg71' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1181' with positive edge clock.
+Creating register for signal `\top.\forvar70' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1182' with positive edge clock.
+Creating register for signal `\top.\reg69' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1183' with positive edge clock.
+Creating register for signal `\top.\reg68' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1184' with positive edge clock.
+Creating register for signal `\top.\forvar67' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1185' with positive edge clock.
+Creating register for signal `\top.\reg66' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1186' with positive edge clock.
+Creating register for signal `\top.\reg65' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1187' with positive edge clock.
+Creating register for signal `\top.\reg64' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1188' with positive edge clock.
+Creating register for signal `\top.\forvar63' using process `\top.$proc$rtl.v:530$267'.
+  created $dff cell `$procdff$1189' with positive edge clock.
+Creating register for signal `\top.\reg62' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1190' with positive edge clock.
+Creating register for signal `\top.\reg61' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1191' with positive edge clock.
+Creating register for signal `\top.\reg60' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1192' with positive edge clock.
+Creating register for signal `\top.\reg59' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1193' with positive edge clock.
+Creating register for signal `\top.\reg58' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1194' with positive edge clock.
+Creating register for signal `\top.\forvar57' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1195' with positive edge clock.
+Creating register for signal `\top.\reg56' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1196' with positive edge clock.
+Creating register for signal `\top.\reg55' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1197' with positive edge clock.
+Creating register for signal `\top.\reg54' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1198' with positive edge clock.
+Creating register for signal `\top.\reg53' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1199' with positive edge clock.
+Creating register for signal `\top.\forvar52' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1200' with positive edge clock.
+Creating register for signal `\top.\reg51' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1201' with positive edge clock.
+Creating register for signal `\top.\reg50' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1202' with positive edge clock.
+Creating register for signal `\top.\reg49' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1203' with positive edge clock.
+Creating register for signal `\top.\reg48' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1204' with positive edge clock.
+Creating register for signal `\top.\reg47' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1205' with positive edge clock.
+Creating register for signal `\top.\forvar46' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1206' with positive edge clock.
+Creating register for signal `\top.\reg45' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1207' with positive edge clock.
+Creating register for signal `\top.\reg44' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1208' with positive edge clock.
+Creating register for signal `\top.\reg43' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1209' with positive edge clock.
+Creating register for signal `\top.\reg42' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1210' with positive edge clock.
+Creating register for signal `\top.\reg41' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1211' with positive edge clock.
+Creating register for signal `\top.\forvar40' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1212' with positive edge clock.
+Creating register for signal `\top.\reg39' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1213' with positive edge clock.
+Creating register for signal `\top.\reg38' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1214' with positive edge clock.
+Creating register for signal `\top.\reg37' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1215' with positive edge clock.
+Creating register for signal `\top.\reg36' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1216' with positive edge clock.
+Creating register for signal `\top.\forvar35' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1217' with positive edge clock.
+Creating register for signal `\top.\reg34' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1218' with positive edge clock.
+Creating register for signal `\top.\reg33' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1219' with positive edge clock.
+Creating register for signal `\top.\reg32' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1220' with positive edge clock.
+Creating register for signal `\top.\reg31' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1221' with positive edge clock.
+Creating register for signal `\top.\reg30' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1222' with positive edge clock.
+Creating register for signal `\top.\forvar29' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1223' with positive edge clock.
+Creating register for signal `\top.\reg28' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1224' with positive edge clock.
+Creating register for signal `\top.\reg27' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1225' with positive edge clock.
+Creating register for signal `\top.\reg26' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1226' with positive edge clock.
+Creating register for signal `\top.\reg25' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1227' with positive edge clock.
+Creating register for signal `\top.\reg24' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1228' with positive edge clock.
+Creating register for signal `\top.\forvar23' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1229' with positive edge clock.
+Creating register for signal `\top.\forvar22' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1230' with positive edge clock.
+Creating register for signal `\top.\reg21' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1231' with positive edge clock.
+Creating register for signal `\top.\reg20' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1232' with positive edge clock.
+Creating register for signal `\top.\reg19' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1233' with positive edge clock.
+Creating register for signal `\top.\forvar18' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1234' with positive edge clock.
+Creating register for signal `\top.\reg17' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1235' with positive edge clock.
+Creating register for signal `\top.\reg16' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1236' with positive edge clock.
+Creating register for signal `\top.\reg15' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1237' with positive edge clock.
+Creating register for signal `\top.\reg14' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1238' with positive edge clock.
+Creating register for signal `\top.\reg13' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1239' with positive edge clock.
+Creating register for signal `\top.\reg10' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1240' with positive edge clock.
+Creating register for signal `\top.\reg12' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1241' with positive edge clock.
+Creating register for signal `\top.\reg11' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1242' with positive edge clock.
+Creating register for signal `\top.\forvar10' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1243' with positive edge clock.
+Creating register for signal `\top.\reg9' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1244' with positive edge clock.
+Creating register for signal `\top.\reg8' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1245' with positive edge clock.
+Creating register for signal `\top.\forvar7' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1246' with positive edge clock.
+Creating register for signal `\top.\reg6' using process `\top.$proc$rtl.v:335$40'.
+  created $dff cell `$procdff$1247' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `top.$proc$rtl.v:170$878'.
+Removing empty process `top.$proc$rtl.v:169$877'.
+Removing empty process `top.$proc$rtl.v:168$876'.
+Removing empty process `top.$proc$rtl.v:167$875'.
+Removing empty process `top.$proc$rtl.v:166$874'.
+Removing empty process `top.$proc$rtl.v:165$873'.
+Removing empty process `top.$proc$rtl.v:164$872'.
+Removing empty process `top.$proc$rtl.v:163$871'.
+Removing empty process `top.$proc$rtl.v:162$870'.
+Removing empty process `top.$proc$rtl.v:161$869'.
+Removing empty process `top.$proc$rtl.v:160$868'.
+Removing empty process `top.$proc$rtl.v:159$867'.
+Removing empty process `top.$proc$rtl.v:158$866'.
+Removing empty process `top.$proc$rtl.v:157$865'.
+Removing empty process `top.$proc$rtl.v:156$864'.
+Removing empty process `top.$proc$rtl.v:155$863'.
+Removing empty process `top.$proc$rtl.v:154$862'.
+Removing empty process `top.$proc$rtl.v:153$861'.
+Removing empty process `top.$proc$rtl.v:152$860'.
+Removing empty process `top.$proc$rtl.v:151$859'.
+Removing empty process `top.$proc$rtl.v:150$858'.
+Removing empty process `top.$proc$rtl.v:149$857'.
+Removing empty process `top.$proc$rtl.v:148$856'.
+Removing empty process `top.$proc$rtl.v:147$855'.
+Removing empty process `top.$proc$rtl.v:146$854'.
+Removing empty process `top.$proc$rtl.v:145$853'.
+Removing empty process `top.$proc$rtl.v:144$852'.
+Removing empty process `top.$proc$rtl.v:143$851'.
+Removing empty process `top.$proc$rtl.v:142$850'.
+Removing empty process `top.$proc$rtl.v:141$849'.
+Removing empty process `top.$proc$rtl.v:140$848'.
+Removing empty process `top.$proc$rtl.v:139$847'.
+Removing empty process `top.$proc$rtl.v:138$846'.
+Removing empty process `top.$proc$rtl.v:137$845'.
+Removing empty process `top.$proc$rtl.v:136$844'.
+Removing empty process `top.$proc$rtl.v:135$843'.
+Removing empty process `top.$proc$rtl.v:134$842'.
+Removing empty process `top.$proc$rtl.v:133$841'.
+Removing empty process `top.$proc$rtl.v:132$840'.
+Removing empty process `top.$proc$rtl.v:131$839'.
+Removing empty process `top.$proc$rtl.v:130$838'.
+Removing empty process `top.$proc$rtl.v:129$837'.
+Removing empty process `top.$proc$rtl.v:128$836'.
+Removing empty process `top.$proc$rtl.v:127$835'.
+Removing empty process `top.$proc$rtl.v:126$834'.
+Removing empty process `top.$proc$rtl.v:125$833'.
+Removing empty process `top.$proc$rtl.v:124$832'.
+Removing empty process `top.$proc$rtl.v:123$831'.
+Removing empty process `top.$proc$rtl.v:122$830'.
+Removing empty process `top.$proc$rtl.v:121$829'.
+Removing empty process `top.$proc$rtl.v:120$828'.
+Removing empty process `top.$proc$rtl.v:119$827'.
+Removing empty process `top.$proc$rtl.v:118$826'.
+Removing empty process `top.$proc$rtl.v:117$825'.
+Removing empty process `top.$proc$rtl.v:116$824'.
+Removing empty process `top.$proc$rtl.v:115$823'.
+Removing empty process `top.$proc$rtl.v:114$822'.
+Removing empty process `top.$proc$rtl.v:113$821'.
+Removing empty process `top.$proc$rtl.v:112$820'.
+Removing empty process `top.$proc$rtl.v:111$819'.
+Removing empty process `top.$proc$rtl.v:110$818'.
+Removing empty process `top.$proc$rtl.v:109$817'.
+Removing empty process `top.$proc$rtl.v:108$816'.
+Removing empty process `top.$proc$rtl.v:107$815'.
+Removing empty process `top.$proc$rtl.v:106$814'.
+Removing empty process `top.$proc$rtl.v:105$813'.
+Removing empty process `top.$proc$rtl.v:104$812'.
+Removing empty process `top.$proc$rtl.v:103$811'.
+Removing empty process `top.$proc$rtl.v:102$810'.
+Removing empty process `top.$proc$rtl.v:101$809'.
+Removing empty process `top.$proc$rtl.v:100$808'.
+Removing empty process `top.$proc$rtl.v:99$807'.
+Removing empty process `top.$proc$rtl.v:98$806'.
+Removing empty process `top.$proc$rtl.v:97$805'.
+Removing empty process `top.$proc$rtl.v:96$804'.
+Removing empty process `top.$proc$rtl.v:95$803'.
+Removing empty process `top.$proc$rtl.v:94$802'.
+Removing empty process `top.$proc$rtl.v:93$801'.
+Removing empty process `top.$proc$rtl.v:91$800'.
+Removing empty process `top.$proc$rtl.v:90$799'.
+Removing empty process `top.$proc$rtl.v:89$798'.
+Removing empty process `top.$proc$rtl.v:88$797'.
+Removing empty process `top.$proc$rtl.v:86$796'.
+Removing empty process `top.$proc$rtl.v:85$795'.
+Removing empty process `top.$proc$rtl.v:84$794'.
+Removing empty process `top.$proc$rtl.v:83$793'.
+Removing empty process `top.$proc$rtl.v:82$792'.
+Removing empty process `top.$proc$rtl.v:81$791'.
+Removing empty process `top.$proc$rtl.v:80$790'.
+Removing empty process `top.$proc$rtl.v:79$789'.
+Removing empty process `top.$proc$rtl.v:78$788'.
+Removing empty process `top.$proc$rtl.v:77$787'.
+Removing empty process `top.$proc$rtl.v:76$786'.
+Removing empty process `top.$proc$rtl.v:75$785'.
+Removing empty process `top.$proc$rtl.v:74$784'.
+Removing empty process `top.$proc$rtl.v:73$783'.
+Removing empty process `top.$proc$rtl.v:72$782'.
+Removing empty process `top.$proc$rtl.v:71$781'.
+Removing empty process `top.$proc$rtl.v:70$780'.
+Removing empty process `top.$proc$rtl.v:69$779'.
+Removing empty process `top.$proc$rtl.v:68$778'.
+Removing empty process `top.$proc$rtl.v:67$777'.
+Removing empty process `top.$proc$rtl.v:66$776'.
+Removing empty process `top.$proc$rtl.v:65$775'.
+Removing empty process `top.$proc$rtl.v:64$774'.
+Removing empty process `top.$proc$rtl.v:63$773'.
+Removing empty process `top.$proc$rtl.v:62$772'.
+Removing empty process `top.$proc$rtl.v:61$771'.
+Removing empty process `top.$proc$rtl.v:60$770'.
+Removing empty process `top.$proc$rtl.v:59$769'.
+Removing empty process `top.$proc$rtl.v:58$768'.
+Removing empty process `top.$proc$rtl.v:57$767'.
+Removing empty process `top.$proc$rtl.v:56$766'.
+Removing empty process `top.$proc$rtl.v:55$765'.
+Removing empty process `top.$proc$rtl.v:54$764'.
+Removing empty process `top.$proc$rtl.v:53$763'.
+Removing empty process `top.$proc$rtl.v:52$762'.
+Removing empty process `top.$proc$rtl.v:51$761'.
+Removing empty process `top.$proc$rtl.v:50$760'.
+Removing empty process `top.$proc$rtl.v:49$759'.
+Removing empty process `top.$proc$rtl.v:48$758'.
+Removing empty process `top.$proc$rtl.v:47$757'.
+Removing empty process `top.$proc$rtl.v:46$756'.
+Removing empty process `top.$proc$rtl.v:45$755'.
+Removing empty process `top.$proc$rtl.v:44$754'.
+Removing empty process `top.$proc$rtl.v:43$753'.
+Removing empty process `top.$proc$rtl.v:42$752'.
+Removing empty process `top.$proc$rtl.v:41$751'.
+Removing empty process `top.$proc$rtl.v:40$750'.
+Removing empty process `top.$proc$rtl.v:39$749'.
+Removing empty process `top.$proc$rtl.v:38$748'.
+Removing empty process `top.$proc$rtl.v:37$747'.
+Removing empty process `top.$proc$rtl.v:36$746'.
+Removing empty process `top.$proc$rtl.v:35$745'.
+Removing empty process `top.$proc$rtl.v:34$744'.
+Removing empty process `top.$proc$rtl.v:33$743'.
+Removing empty process `top.$proc$rtl.v:32$742'.
+Removing empty process `top.$proc$rtl.v:31$741'.
+Removing empty process `top.$proc$rtl.v:30$740'.
+Removing empty process `top.$proc$rtl.v:29$739'.
+Removing empty process `top.$proc$rtl.v:28$738'.
+Removing empty process `top.$proc$rtl.v:27$737'.
+Removing empty process `top.$proc$rtl.v:26$736'.
+Removing empty process `top.$proc$rtl.v:25$735'.
+Removing empty process `top.$proc$rtl.v:24$734'.
+Removing empty process `top.$proc$rtl.v:23$733'.
+Removing empty process `top.$proc$rtl.v:22$732'.
+Removing empty process `top.$proc$rtl.v:21$731'.
+Removing empty process `top.$proc$rtl.v:20$730'.
+Removing empty process `top.$proc$rtl.v:19$729'.
+Removing empty process `top.$proc$rtl.v:18$728'.
+Removing empty process `top.$proc$rtl.v:17$727'.
+Removing empty process `top.$proc$rtl.v:16$726'.
+Removing empty process `top.$proc$rtl.v:15$725'.
+Removing empty process `top.$proc$rtl.v:14$724'.
+Removing empty process `top.$proc$rtl.v:13$723'.
+Removing empty process `top.$proc$rtl.v:12$722'.
+Removing empty process `top.$proc$rtl.v:11$721'.
+Found and cleaned up 3 empty switches in `\top.$proc$rtl.v:731$642'.
+Removing empty process `top.$proc$rtl.v:731$642'.
+Removing empty process `top.$proc$rtl.v:659$532'.
+Removing empty process `top.$proc$rtl.v:654$524'.
+Found and cleaned up 4 empty switches in `\top.$proc$rtl.v:579$303'.
+Removing empty process `top.$proc$rtl.v:579$303'.
+Removing empty process `top.$proc$rtl.v:570$292'.
+Found and cleaned up 1 empty switch in `\top.$proc$rtl.v:530$267'.
+Removing empty process `top.$proc$rtl.v:530$267'.
+Found and cleaned up 3 empty switches in `\top.$proc$rtl.v:335$40'.
+Removing empty process `top.$proc$rtl.v:335$40'.
+Cleaned up 11 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~107 debug messages>
+
+2.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~7 debug messages>
+
+2.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 259 unused cells and 853 unused wires.
+<suppressed ~352 debug messages>
+
+2.5. Executing CHECK pass (checking for obvious problems).
+Checking module top...
+Found and reported 0 problems.
+
+2.6. Executing OPT pass (performing simple optimizations).
+
+2.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~15 debug messages>
+Removed a total of 5 cells.
+
+2.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1043.
+    dead port 1/2 on $mux $procmux$1049.
+    dead port 1/2 on $mux $procmux$898.
+    dead port 1/2 on $mux $procmux$904.
+Removed 4 multiplexer ports.
+<suppressed ~89 debug messages>
+
+2.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:378$87: \wire2
+    New input vector for $reduce_and cell $reduce_and$rtl.v:392$107: \reg17
+  Optimizing cells in module \top.
+Performed a total of 2 changes.
+
+2.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1126 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1128 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1130 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1135 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1135 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1135 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1136 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1137 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1138 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1139 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1140 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1141 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1143 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1144 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1145 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1146 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1148 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1149 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 21 on $procdff$1151 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1152 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1152 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1152 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1154 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1154 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1154 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1154 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1156 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1158 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1159 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1166 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1167 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1169 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1170 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1170 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1170 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1170 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1170 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1171 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1175 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1175 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1175 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1175 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1176 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1191 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1193 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1194 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 21 on $procdff$1195 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1196 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1196 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1196 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1196 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1197 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1197 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1197 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1198 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1198 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1199 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1200 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1203 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1203 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1205 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1208 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1208 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1209 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 21 on $procdff$1212 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1213 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1215 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1216 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1217 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1217 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1217 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1217 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1217 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 19 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 20 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 21 on $procdff$1219 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1222 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1222 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1222 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1222 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1222 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1223 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1224 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1226 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1227 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1229 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1229 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1229 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1229 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1247 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1247 ($dff) from module top.
+
+2.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+2.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~28 debug messages>
+
+2.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+2.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:725$630: \reg79 [6:0]
+    New input vector for $reduce_or cell $reduce_or$rtl.v:479$260: \reg54 [1:0]
+  Optimizing cells in module \top.
+Performed a total of 2 changes.
+
+2.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~57 debug messages>
+Removed a total of 19 cells.
+
+2.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1289 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1289 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1289 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1289 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1134 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1163 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1163 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1163 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1163 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1168 ($dff) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1271 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1271 ($dff) from module top.
+
+2.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 2 unused cells and 28 unused wires.
+<suppressed ~4 debug messages>
+
+2.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+2.6.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    New input vector for $reduce_or cell $reduce_or$rtl.v:725$630: { \reg79 [6] \reg79 [1:0] }
+  Optimizing cells in module \top.
+Performed a total of 1 changes.
+
+2.6.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.6.20. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1280 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1280 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1280 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1317 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1317 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1317 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1317 ($dff) from module top.
+
+2.6.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.6.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.6.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+2.6.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.6.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.6.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.6.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.6.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.6.30. Finished OPT passes. (There is nothing left to do.)
+
+2.7. Executing FSM pass (extract and optimize FSM).
+
+2.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+Not marking top.forvar10 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar141 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar18 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar63 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar67 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar7 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.forvar70 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg12 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg140 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg21 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg65 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg72 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+Not marking top.reg73 as FSM state register:
+    Register is connected to module port.
+    Users of register don't seem to benefit from recoding.
+    Register has an initialization value.
+
+2.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~84 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$1245 ($dff) from module top (D = $neg$rtl.v:344$50_Y [14:0], Q = \reg8, rval = 15'000000001000000).
+Adding EN signal on $procdff$1243 ($dff) from module top (D = 12'000000000000, Q = \forvar10).
+Adding EN signal on $procdff$1242 ($dff) from module top (D = $ternary$rtl.v:361$71_Y [13:0], Q = \reg11).
+Adding EN signal on $procdff$1239 ($dff) from module top (D = { 10'0000000000 \reg8 [9:5] }, Q = \reg13).
+Adding EN signal on $procdff$1237 ($dff) from module top (D = \wire3 [3:0], Q = \reg15).
+Adding EN signal on $procdff$1236 ($dff) from module top (D = { 13'0000000000000 $le$rtl.v:384$101_Y }, Q = \reg16).
+Adding EN signal on $procdff$1235 ($dff) from module top (D = $gt$rtl.v:387$105_Y, Q = \reg17).
+Adding EN signal on $procdff$1233 ($dff) from module top (D = $ternary$rtl.v:391$114_Y [7:0], Q = \reg19).
+Adding EN signal on $procdff$1231 ($dff) from module top (D = 9'101000111, Q = \reg21).
+Adding SRST signal on $procdff$1207 ($dff) from module top (D = \reg43 [3:0], Q = \reg45, rval = 4'0001).
+Adding SRST signal on $procdff$1192 ($dff) from module top (D = $0\reg10[18:0] [18:2], Q = \reg60 [18:2], rval = 17'00000000000000000).
+Adding EN signal on $procdff$1189 ($dff) from module top (D = 21'000000000000000000010, Q = \forvar63).
+Adding EN signal on $procdff$1188 ($dff) from module top (D = \reg10, Q = \reg64).
+Adding EN signal on $procdff$1187 ($dff) from module top (D = 22'0000000000000000000000, Q = \reg65).
+Adding EN signal on $procdff$1186 ($dff) from module top (D = { 9'000000000 $eq$rtl.v:538$282_Y }, Q = \reg66).
+Adding EN signal on $procdff$1185 ($dff) from module top (D = 8'00000011, Q = \forvar67).
+Adding EN signal on $procdff$1184 ($dff) from module top (D = { 19'0000000000000000000 \forvar86 [0] }, Q = \reg68).
+Adding EN signal on $procdff$1183 ($dff) from module top (D = { 10'0000000000 \reg6 [1:0] }, Q = \reg69).
+Adding EN signal on $procdff$1182 ($dff) from module top (D = 6'000001, Q = \forvar70).
+Adding EN signal on $procdff$1181 ($dff) from module top (D = { 2'00 $add$rtl.v:549$288_Y }, Q = \reg71).
+Adding EN signal on $procdff$1180 ($dff) from module top (D = 16'0000000000000000, Q = \reg72).
+Adding EN signal on $procdff$1179 ($dff) from module top (D = 3'011, Q = \reg73).
+Adding EN signal on $procdff$1178 ($dff) from module top (D = $logic_or$rtl.v:554$291_Y, Q = \reg74).
+Adding EN signal on $procdff$1177 ($dff) from module top (D = { 1'0 \forvar67 }, Q = \reg63).
+Adding SRST signal on $procdff$1162 ($dff) from module top (D = $xnor$rtl.v:600$448_Y, Q = \reg93, rval = 3'001).
+Adding SRST signal on $procdff$1161 ($dff) from module top (D = $logic_or$rtl.v:610$475_Y [17:3], Q = \reg94 [17:3], rval = 15'000000000000000).
+Adding SRST signal on $procdff$1133 ($dff) from module top (D = \reg8 [12:10], Q = \reg128 [3:1], rval = 3'000).
+Adding EN signal on $procdff$1124 ($dff) from module top (D = 7'0000000, Q = \reg140).
+Adding EN signal on $procdff$1123 ($dff) from module top (D = 3'001, Q = \forvar141).
+Adding SRST signal on $procdff$1122 ($dff) from module top (D = $neg$rtl.v:761$663_Y [5:2], Q = \reg142 [5:2], rval = 4'0000).
+Adding SRST signal on $procdff$1121 ($dff) from module top (D = \reg126 [0], Q = \reg143 [0], rval = 1'0).
+Adding SRST signal on $procdff$1120 ($dff) from module top (D = $2\reg144[4:0] [4], Q = \reg144 [4], rval = 1'0).
+Adding EN signal on $procdff$1119 ($dff) from module top (D = $0\reg145[9:0], Q = \reg145).
+Adding SRST signal on $procdff$1118 ($dff) from module top (D = $procmux$940_Y, Q = \reg146, rval = 11'00000000000).
+Adding EN signal on $auto$ff.cc:266:slice$1380 ($sdff) from module top (D = $shl$rtl.v:773$686_Y, Q = \reg146).
+Adding SRST signal on $auto$ff.cc:266:slice$1313 ($dff) from module top (D = \wire2 [1], Q = \reg6 [1], rval = 1'0).
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1370 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1370 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1369 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1363 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1361 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1360 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1359 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1359 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1358 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1358 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1358 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1358 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1358 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1357 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1356 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1355 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1354 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 21 on $auto$ff.cc:266:slice$1353 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 20 on $auto$ff.cc:266:slice$1351 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1347 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1347 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1347 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1347 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1332 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1324 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1322 ($dffe) from module top.
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 31 unused cells and 32 unused wires.
+<suppressed ~32 debug messages>
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~14 debug messages>
+
+2.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $ternary$rtl.v:385$97.
+    dead port 2/2 on $mux $ternary$rtl.v:385$97.
+Removed 2 multiplexer ports.
+<suppressed ~58 debug messages>
+
+2.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~27 debug messages>
+Removed a total of 9 cells.
+
+2.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1366 ($dff) from module top (D = $logic_or$rtl.v:610$475_Y [2:0], Q = \reg94 [2:0], rval = 3'000).
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1385 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1395 ($dffe) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1278 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1278 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1278 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1172 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1172 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1172 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1172 ($dff) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1272 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1273 ($dff) from module top.
+
+2.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 2 unused cells and 24 unused wires.
+<suppressed ~3 debug messages>
+
+2.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~3 debug messages>
+
+2.8.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+2.8.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.8.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 3 unused wires.
+<suppressed ~1 debug messages>
+
+2.8.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.8.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~56 debug messages>
+
+2.8.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.8.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.8.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.8.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.8.30. Finished OPT passes. (There is nothing left to do.)
+
+2.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 1 bits (of 2) from mux cell top.$ternary$rtl.v:337$45 ($mux).
+Removed top 5 bits (of 20) from port Y of cell top.$neg$rtl.v:344$50 ($neg).
+Removed top 5 bits (of 20) from port A of cell top.$neg$rtl.v:344$50 ($neg).
+Removed top 1 bits (of 48) from mux cell top.$ternary$rtl.v:362$66 ($mux).
+Removed top 16 bits (of 20) from mux cell top.$ternary$rtl.v:362$69 ($mux).
+Removed top 6 bits (of 20) from mux cell top.$ternary$rtl.v:361$71 ($mux).
+Removed top 12 bits (of 20) from port A of cell top.$gt$rtl.v:374$78 ($gt).
+Removed top 16 bits (of 20) from port A of cell top.$neg$rtl.v:378$86 ($neg).
+Removed top 13 bits (of 14) from port A of cell top.$not$rtl.v:393$111 ($not).
+Removed top 6 bits (of 14) from mux cell top.$ternary$rtl.v:391$114 ($mux).
+Removed top 1 bits (of 11) from mux cell top.$ternary$rtl.v:394$118 ($mux).
+Removed top 1 bits (of 11) from port A of cell top.$le$rtl.v:394$119 ($le).
+Removed top 6 bits (of 15) from port A of cell top.$xnor$rtl.v:403$150 ($xnor).
+Removed top 10 bits (of 15) from port B of cell top.$xnor$rtl.v:403$150 ($xnor).
+Removed top 6 bits (of 19) from port Y of cell top.$neg$rtl.v:408$158 ($neg).
+Removed top 6 bits (of 19) from port A of cell top.$neg$rtl.v:408$158 ($neg).
+Removed top 13 bits (of 16) from port A of cell top.$sub$rtl.v:422$173 ($sub).
+Removed top 10 bits (of 15) from port A of cell top.$sshl$rtl.v:421$187 ($sshl).
+Removed top 10 bits (of 15) from mux cell top.$ternary$rtl.v:436$196 ($mux).
+Removed top 8 bits (of 9) from port A of cell top.$ne$rtl.v:436$198 ($ne).
+Removed top 11 bits (of 12) from port A of cell top.$mul$rtl.v:445$203 ($mul).
+Removed top 7 bits (of 12) from port Y of cell top.$mul$rtl.v:445$203 ($mul).
+Removed top 8 bits (of 11) from port A of cell top.$le$rtl.v:447$207 ($le).
+Removed top 3 bits (of 22) from port A of cell top.$add$rtl.v:454$217 ($add).
+Removed top 21 bits (of 22) from port B of cell top.$add$rtl.v:454$217 ($add).
+Removed top 2 bits (of 22) from port Y of cell top.$add$rtl.v:454$217 ($add).
+Removed top 2 bits (of 22) from port A of cell top.$not$rtl.v:454$218 ($not).
+Removed top 18 bits (of 31) from port A of cell top.$xor$rtl.v:458$220 ($xor).
+Removed top 16 bits (of 18) from port A of cell top.$sshl$rtl.v:460$221 ($sshl).
+Removed top 22 bits (of 31) from mux cell top.$ternary$rtl.v:457$224 ($mux).
+Removed top 1 bits (of 6) from mux cell top.$ternary$rtl.v:462$229 ($mux).
+Removed top 1 bits (of 6) from port B of cell top.$shr$rtl.v:461$230 ($shr).
+Removed top 17 bits (of 19) from mux cell top.$ternary$rtl.v:478$266 ($mux).
+Removed top 8 bits (of 21) from port B of cell top.$eq$rtl.v:538$282 ($eq).
+Removed top 7 bits (of 8) from port A of cell top.$sub$rtl.v:549$284 ($sub).
+Removed top 9 bits (of 10) from port A of cell top.$gt$rtl.v:550$285 ($gt).
+Removed top 7 bits (of 8) from port B of cell top.$add$rtl.v:549$288 ($add).
+Removed top 18 bits (of 22) from port A of cell top.$le$rtl.v:555$290 ($le).
+Removed top 2 bits (of 22) from port B of cell top.$le$rtl.v:555$290 ($le).
+Removed top 9 bits (of 10) from port A of cell top.$neg$rtl.v:573$296 ($neg).
+Removed top 20 bits (of 22) from port A of cell top.$neg$rtl.v:589$433 ($neg).
+Removed top 17 bits (of 19) from port B of cell top.$le$rtl.v:594$438 ($le).
+Removed top 8 bits (of 9) from mux cell top.$ternary$rtl.v:592$440 ($mux).
+Removed top 7 bits (of 8) from port B of cell top.$sshl$rtl.v:595$442 ($sshl).
+Removed top 1 bits (of 9) from mux cell top.$ternary$rtl.v:590$444 ($mux).
+Removed top 2 bits (of 59) from port A of cell top.$gt$rtl.v:600$446 ($gt).
+Removed top 58 bits (of 59) from port B of cell top.$gt$rtl.v:600$446 ($gt).
+Removed top 2 bits (of 3) from port A of cell top.$auto$opt_expr.cc:706:replace_const_cells$1397 ($not).
+Removed top 9 bits (of 10) from port A of cell top.$ne$rtl.v:603$451 ($ne).
+Removed top 9 bits (of 10) from port B of cell top.$ne$rtl.v:603$451 ($ne).
+Removed top 7 bits (of 15) from mux cell top.$ternary$rtl.v:611$468 ($mux).
+Removed top 7 bits (of 15) from port A of cell top.$and$rtl.v:611$470 ($and).
+Removed top 14 bits (of 15) from port B of cell top.$and$rtl.v:611$470 ($and).
+Removed top 7 bits (of 15) from port Y of cell top.$and$rtl.v:611$470 ($and).
+Removed top 7 bits (of 15) from port A of cell top.$eq$rtl.v:611$472 ($eq).
+Removed top 14 bits (of 15) from port B of cell top.$eq$rtl.v:611$472 ($eq).
+Removed top 1 bits (of 6) from mux cell top.$ternary$rtl.v:633$491 ($mux).
+Removed top 2 bits (of 22) from port A of cell top.$shr$rtl.v:631$493 ($shr).
+Removed top 1 bits (of 6) from port B of cell top.$shr$rtl.v:631$493 ($shr).
+Removed top 16 bits (of 22) from port Y of cell top.$shr$rtl.v:631$493 ($shr).
+Removed top 1 bits (of 47) from mux cell top.$ternary$rtl.v:637$515 ($mux).
+Removed top 4 bits (of 22) from port Y of cell top.$auto$opt_expr.cc:706:replace_const_cells$1264 ($not).
+Removed top 4 bits (of 22) from port A of cell top.$auto$opt_expr.cc:706:replace_const_cells$1264 ($not).
+Removed top 119 bits (of 128) from port A of cell top.$lt$rtl.v:646$521 ($lt).
+Removed top 2 bits (of 128) from port B of cell top.$lt$rtl.v:646$521 ($lt).
+Removed top 10 bits (of 11) from port A of cell top.$sshl$rtl.v:646$522 ($sshl).
+Removed top 21 bits (of 22) from port B of cell top.$or$rtl.v:657$528 ($or).
+Removed top 4 bits (of 22) from mux cell top.$ternary$rtl.v:656$530 ($mux).
+Removed top 6 bits (of 8) from port A of cell top.$xnor$rtl.v:667$541 ($xnor).
+Removed top 8 bits (of 21) from port B of cell top.$xnor$rtl.v:667$541 ($xnor).
+Removed top 5 bits (of 6) from port A of cell top.$shl$rtl.v:705$592 ($shl).
+Removed top 21 bits (of 22) from port B of cell top.$shl$rtl.v:705$592 ($shl).
+Removed top 1 bits (of 2) from port B of cell top.$auto$opt_dff.cc:195:make_patterns_logic$1379 ($ne).
+Removed top 2 bits (of 3) from FF cell top.$auto$ff.cc:266:slice$1399 ($sdff).
+Removed top 21 bits (of 22) from mux cell top.$ternary$rtl.v:707$604 ($mux).
+Removed top 39 bits (of 48) from port A of cell top.$le$rtl.v:711$606 ($le).
+Removed top 1 bits (of 48) from port B of cell top.$le$rtl.v:711$606 ($le).
+Removed top 15 bits (of 16) from mux cell top.$ternary$rtl.v:713$615 ($mux).
+Removed top 16 bits (of 17) from port A of cell top.$ne$rtl.v:711$616 ($ne).
+Removed top 15 bits (of 17) from port B of cell top.$ne$rtl.v:711$616 ($ne).
+Removed top 4 bits (of 5) from mux cell top.$ternary$rtl.v:719$619 ($mux).
+Removed top 1 bits (of 2) from port B of cell top.$gt$rtl.v:719$623 ($gt).
+Removed top 8 bits (of 17) from mux cell top.$ternary$rtl.v:720$626 ($mux).
+Removed top 9 bits (of 17) from mux cell top.$ternary$rtl.v:718$628 ($mux).
+Removed top 4 bits (of 12) from port A of cell top.$sshr$rtl.v:724$629 ($sshr).
+Removed top 7 bits (of 8) from port A of cell top.$sshl$rtl.v:725$632 ($sshl).
+Removed top 6 bits (of 9) from port B of cell top.$xnor$rtl.v:728$636 ($xnor).
+Removed top 13 bits (of 15) from mux cell top.$ternary$rtl.v:739$649 ($mux).
+Removed top 8 bits (of 13) from port B of cell top.$shr$rtl.v:742$650 ($shr).
+Removed top 34 bits (of 42) from mux cell top.$ternary$rtl.v:739$655 ($mux).
+Removed top 34 bits (of 42) from port A of cell top.$ne$rtl.v:739$656 ($ne).
+Removed top 14 bits (of 16) from port A of cell top.$not$rtl.v:752$661 ($not).
+Converting cell top.$not$rtl.v:752$661 ($not) from signed to unsigned.
+Removed top 6 bits (of 16) from port Y of cell top.$not$rtl.v:752$661 ($not).
+Removed top 1 bits (of 2) from port A of cell top.$not$rtl.v:752$661 ($not).
+Removed top 6 bits (of 8) from port A of cell top.$neg$rtl.v:761$663 ($neg).
+Removed top 2 bits (of 8) from port Y of cell top.$neg$rtl.v:761$663 ($neg).
+Removed top 5 bits (of 6) from port A of cell top.$xor$rtl.v:764$670 ($xor).
+Removed top 2 bits (of 3) from port A of cell top.$sshr$rtl.v:772$680 ($sshr).
+Removed top 14 bits (of 17) from port B of cell top.$sshr$rtl.v:772$680 ($sshr).
+Removed top 1 bits (of 20) from port A of cell top.$mul$rtl.v:772$681 ($mul).
+Removed top 1 bits (of 20) from port B of cell top.$mul$rtl.v:772$681 ($mul).
+Removed top 18 bits (of 19) from FF cell top.$auto$ff.cc:266:slice$1368 ($dff).
+Removed top 10 bits (of 11) from port A of cell top.$shl$rtl.v:773$686 ($shl).
+Removed top 4 bits (of 5) from mux cell top.$procmux$895 ($mux).
+Removed top 1 bits (of 5) from mux cell top.$procmux$919 ($mux).
+Removed cell top.$procmux$922 ($mux).
+Removed top 4 bits (of 6) from mux cell top.$procmux$925 ($mux).
+Removed top 6 bits (of 9) from mux cell top.$procmux$1052 ($mux).
+Removed top 9 bits (of 12) from mux cell top.$procmux$1061 ($mux).
+Removed top 1 bits (of 11) from FF cell top.$auto$ff.cc:266:slice$1381 ($sdffe).
+Removed top 4 bits (of 10) from FF cell top.$auto$ff.cc:266:slice$1377 ($dffe).
+Removed cell top.$auto$ff.cc:266:slice$1375 ($sdff).
+Removed top 20 bits (of 21) from FF cell top.$procdff$1125 ($dff).
+Removed top 6 bits (of 7) from FF cell top.$procdff$1127 ($dff).
+Removed top 18 bits (of 19) from FF cell top.$procdff$1132 ($dff).
+Removed top 13 bits (of 14) from FF cell top.$procdff$1150 ($dff).
+Removed top 5 bits (of 6) from FF cell top.$procdff$1153 ($dff).
+Removed top 2 bits (of 17) from FF cell top.$procdff$1157 ($dff).
+Removed cell top.$auto$ff.cc:266:slice$1365 ($sdff).
+Removed top 8 bits (of 9) from FF cell top.$procdff$1173 ($dff).
+Removed top 16 bits (of 17) from FF cell top.$procdff$1174 ($dff).
+Removed top 1 bits (of 2) from FF cell top.$auto$ff.cc:266:slice$1386 ($dffe).
+Removed top 3 bits (of 4) from FF cell top.$auto$ff.cc:266:slice$1362 ($dffe).
+Removed top 10 bits (of 19) from FF cell top.$procdff$1190 ($dff).
+Removed top 4 bits (of 5) from FF cell top.$auto$ff.cc:266:slice$1394 ($dffe).
+Removed top 1 bits (of 2) from FF cell top.$auto$ff.cc:266:slice$1293 ($dff).
+Removed top 2 bits (of 3) from FF cell top.$auto$ff.cc:266:slice$1294 ($dff).
+Removed top 7 bits (of 8) from FF cell top.$procdff$1201 ($dff).
+Removed top 2 bits (of 4) from FF cell top.$auto$ff.cc:266:slice$1300 ($dff).
+Removed top 21 bits (of 22) from FF cell top.$procdff$1211 ($dff).
+Removed top 5 bits (of 6) from FF cell top.$procdff$1228 ($dff).
+Removed top 11 bits (of 12) from FF cell top.$auto$ff.cc:266:slice$1339 ($dffe).
+Removed top 6 bits (of 9) from FF cell top.$procdff$1241 ($dff).
+Removed top 9 bits (of 12) from FF cell top.$procdff$1246 ($dff).
+Removed top 1 bits (of 2) from FF cell top.$auto$ff.cc:266:slice$1400 ($dffe).
+Removed top 6 bits (of 14) from port Y of cell top.$neg$rtl.v:393$112 ($neg).
+Removed top 6 bits (of 14) from port A of cell top.$neg$rtl.v:393$112 ($neg).
+Removed top 11 bits (of 12) from port B of cell top.$lt$rtl.v:406$154 ($lt).
+Removed top 6 bits (of 19) from mux cell top.$ternary$rtl.v:408$157 ($mux).
+Removed top 9 bits (of 12) from port B of cell top.$mul$rtl.v:445$203 ($mul).
+Removed top 1 bits (of 5) from port Y of cell top.$mul$rtl.v:445$203 ($mul).
+Removed top 22 bits (of 31) from port Y of cell top.$xor$rtl.v:458$220 ($xor).
+Removed top 4 bits (of 13) from port A of cell top.$xor$rtl.v:458$220 ($xor).
+Removed top 28 bits (of 31) from port B of cell top.$xor$rtl.v:458$220 ($xor).
+Removed top 13 bits (of 22) from mux cell top.$ternary$rtl.v:459$223 ($mux).
+Removed top 1 bits (of 9) from port Y of cell top.$sshl$rtl.v:595$442 ($sshl).
+Removed top 8 bits (of 9) from port A of cell top.$lt$rtl.v:646$521 ($lt).
+Removed top 4 bits (of 22) from port Y of cell top.$or$rtl.v:657$528 ($or).
+Removed top 4 bits (of 22) from port A of cell top.$or$rtl.v:657$528 ($or).
+Removed top 6 bits (of 9) from mux cell top.$ternary$rtl.v:720$626 ($mux).
+Removed top 8 bits (of 9) from port B of cell top.$gt$rtl.v:727$640 ($gt).
+Removed top 5 bits (of 7) from mux cell top.$ternary$rtl.v:744$659 ($mux).
+Removed top 18 bits (of 19) from port A of cell top.$mul$rtl.v:772$681 ($mul).
+Removed top 1 bits (of 11) from port Y of cell top.$shl$rtl.v:773$686 ($shl).
+Removed top 4 bits (of 10) from mux cell top.$procmux$916 ($mux).
+Removed top 18 bits (of 19) from mux cell top.$procmux$946 ($mux).
+Removed top 2 bits (of 3) from FF cell top.$auto$ff.cc:266:slice$1320 ($dff).
+Removed top 6 bits (of 9) from FF cell top.$procdff$1190 ($dff).
+Removed top 6 bits (of 14) from port Y of cell top.$not$rtl.v:393$111 ($not).
+Removed top 1 bits (of 5) from port B of cell top.$sshl$rtl.v:460$221 ($sshl).
+Removed top 9 bits (of 18) from port Y of cell top.$sshl$rtl.v:460$221 ($sshl).
+Removed top 4 bits (of 22) from mux cell top.$ternary$rtl.v:657$527 ($mux).
+Removed top 4 bits (of 10) from port Y of cell top.$not$rtl.v:752$661 ($not).
+Removed top 4 bits (of 10) from mux cell top.$procmux$901 ($mux).
+Removed top 9 bits (of 12) from wire top.$0\forvar7[11:0].
+Removed top 5 bits (of 6) from wire top.$0\reg103[5:0].
+Removed top 13 bits (of 14) from wire top.$0\reg106[13:0].
+Removed top 3 bits (of 4) from wire top.$0\reg126[3:0].
+Removed top 21 bits (of 22) from wire top.$0\reg128[21:0].
+Removed top 18 bits (of 19) from wire top.$0\reg129[18:0].
+Removed top 6 bits (of 9) from wire top.$0\reg12[8:0].
+Removed top 7 bits (of 8) from wire top.$0\reg133[7:0].
+Removed top 6 bits (of 7) from wire top.$0\reg134[6:0].
+Removed top 20 bits (of 21) from wire top.$0\reg139[20:0].
+Removed top 4 bits (of 6) from wire top.$0\reg142[5:0].
+Removed top 2 bits (of 5) from wire top.$0\reg144[4:0].
+Removed top 5 bits (of 10) from wire top.$0\reg145[9:0].
+Removed top 8 bits (of 9) from wire top.$0\reg26[8:0].
+Removed top 5 bits (of 6) from wire top.$0\reg30[5:0].
+Removed top 9 bits (of 14) from wire top.$0\reg37[13:0].
+Removed top 21 bits (of 22) from wire top.$0\reg41[21:0].
+Removed top 1 bits (of 5) from wire top.$0\reg42[4:0].
+Removed top 5 bits (of 6) from wire top.$0\reg44[5:0].
+Removed top 7 bits (of 8) from wire top.$0\reg51[7:0].
+Removed top 15 bits (of 16) from wire top.$0\reg58[15:0].
+Removed top 17 bits (of 19) from wire top.$0\reg60[18:0].
+Removed top 8 bits (of 9) from wire top.$0\reg81[8:0].
+Removed top 18 bits (of 19) from wire top.$0\reg95[18:0].
+Removed top 4 bits (of 5) from wire top.$2\reg144[4:0].
+Removed top 4 bits (of 10) from wire top.$2\reg145[9:0].
+Removed top 2 bits (of 22) from wire top.$add$rtl.v:454$217_Y.
+Removed top 7 bits (of 15) from wire top.$and$rtl.v:611$470_Y.
+Removed top 2 bits (of 3) from wire top.$ge$rtl.v:772$678_Y.
+Removed top 11 bits (of 12) from wire top.$gt$rtl.v:387$105_Y.
+Removed top 2 bits (of 3) from wire top.$gt$rtl.v:600$446_Y.
+Removed top 16 bits (of 17) from wire top.$gt$rtl.v:719$623_Y.
+Removed top 41 bits (of 42) from wire top.$gt$rtl.v:742$651_Y.
+Removed top 20 bits (of 21) from wire top.$le$rtl.v:394$119_Y.
+Removed top 8 bits (of 9) from wire top.$le$rtl.v:594$438_Y.
+Removed top 16 bits (of 17) from wire top.$le$rtl.v:711$606_Y.
+Removed top 7 bits (of 8) from wire top.$logic_and$rtl.v:549$287_Y.
+Removed top 21 bits (of 22) from wire top.$logic_not$rtl.v:0$278_Y.
+Removed top 9 bits (of 10) from wire top.$logic_not$rtl.v:0$450_Y.
+Removed top 15 bits (of 16) from wire top.$logic_not$rtl.v:0$613_Y.
+Removed top 20 bits (of 21) from wire top.$logic_not$rtl.v:373$92_Y.
+Removed top 7 bits (of 8) from wire top.$logic_not$rtl.v:725$631_Y.
+Removed top 11 bits (of 12) from wire top.$logic_or$rtl.v:445$202_Y.
+Removed top 3 bits (of 4) from wire top.$logic_or$rtl.v:554$291_Y.
+Removed top 17 bits (of 18) from wire top.$logic_or$rtl.v:610$475_Y.
+Removed top 5 bits (of 6) from wire top.$ne$rtl.v:764$669_Y.
+Removed top 5 bits (of 20) from wire top.$neg$rtl.v:344$50_Y.
+Removed top 2 bits (of 8) from wire top.$neg$rtl.v:761$663_Y.
+Removed top 10 bits (of 16) from wire top.$not$rtl.v:752$661_Y.
+Removed top 4 bits (of 22) from wire top.$or$rtl.v:657$528_Y.
+Removed top 14 bits (of 15) from wire top.$reduce_and$rtl.v:612$471_Y.
+Removed top 7 bits (of 8) from wire top.$reduce_xnor$rtl.v:549$283_Y.
+Removed top 4 bits (of 5) from wire top.$reduce_xnor$rtl.v:719$618_Y.
+Removed top 1 bits (of 2) from wire top.$reduce_xnor$rtl.v:720$620_Y.
+Removed top 10 bits (of 11) from wire top.$reduce_xnor$rtl.v:773$685_Y.
+Removed top 8 bits (of 9) from wire top.$reduce_xor$rtl.v:436$197_Y.
+Removed top 1 bits (of 11) from wire top.$shl$rtl.v:773$686_Y.
+Removed top 3 bits (of 26) from wire top.$shr$rtl.v:742$650_Y.
+Removed top 9 bits (of 18) from wire top.$sshl$rtl.v:460$221_Y.
+Removed top 1 bits (of 9) from wire top.$sshl$rtl.v:595$442_Y.
+Removed top 1 bits (of 11) from wire top.$ternary$rtl.v:394$118_Y.
+Removed top 6 bits (of 19) from wire top.$ternary$rtl.v:408$157_Y.
+Removed top 10 bits (of 15) from wire top.$ternary$rtl.v:436$196_Y.
+Removed top 13 bits (of 22) from wire top.$ternary$rtl.v:459$223_Y.
+Removed top 1 bits (of 6) from wire top.$ternary$rtl.v:462$229_Y.
+Removed top 13 bits (of 15) from wire top.$ternary$rtl.v:611$468_Y.
+Removed top 4 bits (of 22) from wire top.$ternary$rtl.v:656$530_Y.
+Removed top 15 bits (of 16) from wire top.$ternary$rtl.v:713$615_Y.
+Removed top 4 bits (of 5) from wire top.$ternary$rtl.v:719$619_Y.
+Removed top 14 bits (of 17) from wire top.$ternary$rtl.v:720$626_Y.
+Removed top 3 bits (of 5) from wire top.forvar102.
+Removed top 1 bits (of 4) from wire top.forvar104.
+Removed top 19 bits (of 21) from wire top.forvar107.
+Removed top 7 bits (of 8) from wire top.forvar110.
+Removed top 16 bits (of 18) from wire top.forvar111.
+Removed top 20 bits (of 21) from wire top.forvar124.
+Removed top 10 bits (of 12) from wire top.forvar125.
+Removed top 17 bits (of 18) from wire top.forvar131.
+Removed top 17 bits (of 18) from wire top.forvar22.
+Removed top 4 bits (of 6) from wire top.forvar23.
+Removed top 14 bits (of 17) from wire top.forvar29.
+Removed top 4 bits (of 6) from wire top.forvar35.
+Removed top 21 bits (of 22) from wire top.forvar40.
+Removed top 7 bits (of 8) from wire top.forvar46.
+Removed top 12 bits (of 15) from wire top.forvar52.
+Removed top 20 bits (of 22) from wire top.forvar57.
+Removed top 19 bits (of 21) from wire top.forvar63.
+Removed top 6 bits (of 8) from wire top.forvar67.
+Removed top 18 bits (of 21) from wire top.forvar84.
+Removed top 16 bits (of 17) from wire top.forvar96.
+Removed top 6 bits (of 9) from wire top.forvar97.
+Removed top 1 bits (of 3) from wire top.reg36.
+Removed top 9 bits (of 14) from wire top.reg37.
+Removed top 2 bits (of 4) from wire top.reg54.
+Removed top 4 bits (of 11) from wire top.reg79.
+
+2.10. Executing PEEPOPT pass (run peephole optimizers).
+shiftmul pattern in top: shift=$shr$rtl.v:772$682, mul=$mul$rtl.v:772$681
+
+2.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 1 unused cells and 102 unused wires.
+<suppressed ~2 debug messages>
+
+2.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module top:
+  creating $macc model for $add$rtl.v:454$217 ($add).
+  creating $macc model for $add$rtl.v:549$288 ($add).
+  creating $macc model for $mul$rtl.v:445$203 ($mul).
+  creating $macc model for $mul$rtl.v:637$510 ($mul).
+  creating $macc model for $neg$rtl.v:344$50 ($neg).
+  creating $macc model for $neg$rtl.v:378$86 ($neg).
+  creating $macc model for $neg$rtl.v:393$112 ($neg).
+  creating $macc model for $neg$rtl.v:408$158 ($neg).
+  creating $macc model for $neg$rtl.v:573$296 ($neg).
+  creating $macc model for $neg$rtl.v:589$433 ($neg).
+  creating $macc model for $neg$rtl.v:761$663 ($neg).
+  creating $macc model for $neg$rtl.v:773$684 ($neg).
+  creating $macc model for $sub$rtl.v:422$173 ($sub).
+  creating $macc model for $sub$rtl.v:549$284 ($sub).
+  merging $macc model for $sub$rtl.v:549$284 into $add$rtl.v:549$288.
+  creating $alu model for $macc $sub$rtl.v:422$173.
+  creating $alu model for $macc $neg$rtl.v:773$684.
+  creating $alu model for $macc $neg$rtl.v:761$663.
+  creating $alu model for $macc $neg$rtl.v:573$296.
+  creating $alu model for $macc $neg$rtl.v:408$158.
+  creating $alu model for $macc $neg$rtl.v:393$112.
+  creating $alu model for $macc $neg$rtl.v:378$86.
+  creating $alu model for $macc $neg$rtl.v:344$50.
+  creating $alu model for $macc $add$rtl.v:454$217.
+  creating $macc cell for $mul$rtl.v:637$510: $auto$alumacc.cc:365:replace_macc$1497
+  creating $macc cell for $mul$rtl.v:445$203: $auto$alumacc.cc:365:replace_macc$1498
+  creating $macc cell for $add$rtl.v:549$288: $auto$alumacc.cc:365:replace_macc$1499
+  creating $macc cell for $neg$rtl.v:589$433: $auto$alumacc.cc:365:replace_macc$1500
+  creating $alu model for $ge$rtl.v:772$678 ($ge): new $alu
+  creating $alu model for $gt$rtl.v:374$78 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:387$105 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:550$285 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:600$446 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:719$623 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:727$640 ($gt): new $alu
+  creating $alu model for $gt$rtl.v:742$651 ($gt): new $alu
+  creating $alu model for $le$rtl.v:394$119 ($le): new $alu
+  creating $alu model for $le$rtl.v:447$207 ($le): new $alu
+  creating $alu model for $le$rtl.v:555$290 ($le): new $alu
+  creating $alu model for $le$rtl.v:594$438 ($le): new $alu
+  creating $alu model for $le$rtl.v:711$606 ($le): new $alu
+  creating $alu model for $lt$rtl.v:406$154 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:646$521 ($lt): new $alu
+  creating $alu model for $lt$rtl.v:725$633 ($lt): new $alu
+  creating $alu cell for $lt$rtl.v:725$633: $auto$alumacc.cc:485:replace_alu$1517
+  creating $alu cell for $lt$rtl.v:646$521: $auto$alumacc.cc:485:replace_alu$1528
+  creating $alu cell for $lt$rtl.v:406$154: $auto$alumacc.cc:485:replace_alu$1533
+  creating $alu cell for $le$rtl.v:711$606: $auto$alumacc.cc:485:replace_alu$1544
+  creating $alu cell for $le$rtl.v:594$438: $auto$alumacc.cc:485:replace_alu$1553
+  creating $alu cell for $le$rtl.v:555$290: $auto$alumacc.cc:485:replace_alu$1566
+  creating $alu cell for $le$rtl.v:447$207: $auto$alumacc.cc:485:replace_alu$1575
+  creating $alu cell for $le$rtl.v:394$119: $auto$alumacc.cc:485:replace_alu$1584
+  creating $alu cell for $gt$rtl.v:742$651: $auto$alumacc.cc:485:replace_alu$1597
+  creating $alu cell for $gt$rtl.v:727$640: $auto$alumacc.cc:485:replace_alu$1608
+  creating $alu cell for $gt$rtl.v:719$623: $auto$alumacc.cc:485:replace_alu$1613
+  creating $alu cell for $gt$rtl.v:600$446: $auto$alumacc.cc:485:replace_alu$1618
+  creating $alu cell for $gt$rtl.v:550$285: $auto$alumacc.cc:485:replace_alu$1623
+  creating $alu cell for $gt$rtl.v:387$105: $auto$alumacc.cc:485:replace_alu$1634
+  creating $alu cell for $gt$rtl.v:374$78: $auto$alumacc.cc:485:replace_alu$1639
+  creating $alu cell for $ge$rtl.v:772$678: $auto$alumacc.cc:485:replace_alu$1644
+  creating $alu cell for $add$rtl.v:454$217: $auto$alumacc.cc:485:replace_alu$1653
+  creating $alu cell for $neg$rtl.v:344$50: $auto$alumacc.cc:485:replace_alu$1656
+  creating $alu cell for $neg$rtl.v:378$86: $auto$alumacc.cc:485:replace_alu$1659
+  creating $alu cell for $neg$rtl.v:393$112: $auto$alumacc.cc:485:replace_alu$1662
+  creating $alu cell for $neg$rtl.v:408$158: $auto$alumacc.cc:485:replace_alu$1665
+  creating $alu cell for $neg$rtl.v:573$296: $auto$alumacc.cc:485:replace_alu$1668
+  creating $alu cell for $neg$rtl.v:761$663: $auto$alumacc.cc:485:replace_alu$1671
+  creating $alu cell for $neg$rtl.v:773$684: $auto$alumacc.cc:485:replace_alu$1674
+  creating $alu cell for $sub$rtl.v:422$173: $auto$alumacc.cc:485:replace_alu$1677
+  created 25 $alu and 4 $macc cells.
+
+2.13. Executing SHARE pass (SAT-based resource sharing).
+Found 3 cells in module top that may be considered for resource sharing.
+  Analyzing resource sharing options for $sshl$rtl.v:595$442 ($sshl):
+    Found 1 activation_patterns using ctrl signal $reduce_bool$rtl.v:590$443_Y.
+    No candidates found.
+  Analyzing resource sharing options for $sshl$rtl.v:460$221 ($sshl):
+    Found 1 activation_patterns using ctrl signal { $reduce_xor$rtl.v:457$219_Y $0\reg27[12:0] [12] }.
+    No candidates found.
+  Analyzing resource sharing options for $shr$rtl.v:742$650 ($shr):
+    Found 1 activation_patterns using ctrl signal $reduce_bool$rtl.v:739$653_Y.
+    No candidates found.
+
+2.14. Executing OPT pass (performing simple optimizations).
+
+2.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~14 debug messages>
+
+2.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~18 debug messages>
+Removed a total of 6 cells.
+
+2.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~53 debug messages>
+
+2.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$1164 ($dff) from module top (D = $auto$wreduce.cc:461:run$1461 [7:1], Q = \reg91 [7:1], rval = 7'0000000).
+Adding SRST signal on $procdff$1131 ($dff) from module top (D = \reg12 [2:1], Q = \reg130 [2:1], rval = 2'00).
+Adding SRST signal on $auto$ff.cc:266:slice$1376 ($dff) from module top (D = \wire4 [6:4], Q = \reg144 [3:1], rval = 3'000).
+Adding SRST signal on $auto$ff.cc:266:slice$1323 ($dffe) from module top (D = \wire1 [13:4], Q = \reg11 [13:4], rval = 10'0000000000).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 6 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 7 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 8 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 9 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 10 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 11 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 12 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 13 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 14 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 15 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 16 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 17 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 18 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 19 on $auto$ff.cc:266:slice$1374 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 2 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 3 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 5 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 6 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 7 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 8 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 9 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 10 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 11 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 12 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 13 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 14 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 15 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 16 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 17 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 18 on $procdff$1160 ($dff) from module top.
+Setting constant 0-bit at position 4 on $procdff$1210 ($dff) from module top.
+
+2.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 4 unused cells and 33 unused wires.
+<suppressed ~5 debug messages>
+
+2.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~53 debug messages>
+
+2.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1275 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1275 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1275 ($dff) from module top.
+
+2.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~4 debug messages>
+
+2.14.16. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.17. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+2.14.18. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.19. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.14.20. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.21. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+2.14.22. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.23. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.14.24. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~51 debug messages>
+
+2.14.25. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.14.26. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.14.27. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.14.28. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.14.29. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.14.30. Finished OPT passes. (There is nothing left to do.)
+
+2.15. Executing MEMORY pass.
+
+2.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.17. Executing OPT pass (performing simple optimizations).
+
+2.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~675 debug messages>
+
+2.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~611 debug messages>
+Removed a total of 125 cells.
+
+2.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $procdff$1150 ($dff) from module top.
+
+2.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 28 unused cells and 544 unused wires.
+<suppressed ~29 debug messages>
+
+2.17.5. Rerunning OPT passes. (Removed registers in this run.)
+
+2.17.6. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~1 debug messages>
+
+2.17.7. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.17.8. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $auto$ff.cc:266:slice$1377 ($dffe) from module top (D = $2\reg145[9:0] [2:1], Q = \reg145 [2:1], rval = 2'11).
+Adding SRST signal on $auto$ff.cc:266:slice$1346 ($dffe) from module top (D = \reg11 [7:2], Q = \reg19 [7:2], rval = 6'000000).
+
+2.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.17.10. Rerunning OPT passes. (Removed registers in this run.)
+
+2.17.11. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.17.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.17.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.17.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.17.15. Finished fast OPT passes.
+
+2.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~48 debug messages>
+
+2.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $procmux$1040:
+      Old ports: A=21'100100111010001010011, B={ 20'00000000000000000000 $auto$wreduce.cc:461:run$1442 [0] }, Y=$2\reg14[20:0]
+      New ports: A=2'11, B={ 1'0 $auto$wreduce.cc:461:run$1442 [0] }, Y=$2\reg14[20:0] [1:0]
+      New connections: $2\reg14[20:0] [20:2] = { $2\reg14[20:0] [1] 2'00 $2\reg14[20:0] [1] 2'00 $2\reg14[20:0] [1] $2\reg14[20:0] [1] $2\reg14[20:0] [1] 1'0 $2\reg14[20:0] [1] 3'000 $2\reg14[20:0] [1] 1'0 $2\reg14[20:0] [1] 2'00 }
+    Consolidated identical input bits for $mux cell $procmux$1052:
+      Old ports: A=3'001, B=3'100, Y=$0\reg12[8:0]
+      New ports: A=2'01, B=2'10, Y={ $0\reg12[8:0] [2] $0\reg12[8:0] [0] }
+      New connections: $0\reg12[8:0] [1] = 1'0
+    Consolidated identical input bits for $mux cell $procmux$1061:
+      Old ports: A=3'010, B=3'100, Y=$0\forvar7[11:0]
+      New ports: A=2'01, B=2'10, Y=$0\forvar7[11:0] [2:1]
+      New connections: $0\forvar7[11:0] [0] = 1'0
+    Consolidated identical input bits for $mux cell $procmux$916:
+      Old ports: A={ 3'000 $2\reg145[9:0] [2:0] }, B={ 5'11111 $auto$opt_expr.cc:205:group_cell_inputs$2044 }, Y={ $auto$wreduce.cc:461:run$1414 [5] $0\reg145[9:0] }
+      New ports: A={ 1'0 $2\reg145[9:0] [2:0] }, B={ 3'111 $auto$opt_expr.cc:205:group_cell_inputs$2044 }, Y=$0\reg145[9:0] [3:0]
+      New connections: { $auto$wreduce.cc:461:run$1414 [5] $0\reg145[9:0] [4] } = { $0\reg145[9:0] [3] $0\reg145[9:0] [3] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:359$63:
+      Old ports: A={ 16'0000000000000000 \reg12 [2:0] }, B={ \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5] \reg8 [5:0] }, Y=$ternary$rtl.v:359$63_Y
+      New ports: A={ 3'000 \reg12 [2:0] }, B=\reg8 [5:0], Y=$ternary$rtl.v:359$63_Y [5:0]
+      New connections: $ternary$rtl.v:359$63_Y [18:6] = { $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] $ternary$rtl.v:359$63_Y [5] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:362$66:
+      Old ports: A=47'10001010100010101001000010010010100001001110010, B=47'00000000000000000000000000000000000000000000000, Y=$ternary$rtl.v:362$66_Y [46:0]
+      New ports: A=1'1, B=1'0, Y=$ternary$rtl.v:362$66_Y [1]
+      New connections: { $ternary$rtl.v:362$66_Y [46:2] $ternary$rtl.v:362$66_Y [0] } = { $ternary$rtl.v:362$66_Y [1] 3'000 $ternary$rtl.v:362$66_Y [1] 1'0 $ternary$rtl.v:362$66_Y [1] 1'0 $ternary$rtl.v:362$66_Y [1] 3'000 $ternary$rtl.v:362$66_Y [1] 1'0 $ternary$rtl.v:362$66_Y [1] 1'0 $ternary$rtl.v:362$66_Y [1] 2'00 $ternary$rtl.v:362$66_Y [1] 4'0000 $ternary$rtl.v:362$66_Y [1] 2'00 $ternary$rtl.v:362$66_Y [1] 2'00 $ternary$rtl.v:362$66_Y [1] 1'0 $ternary$rtl.v:362$66_Y [1] 4'0000 $ternary$rtl.v:362$66_Y [1] 2'00 $ternary$rtl.v:362$66_Y [1] $ternary$rtl.v:362$66_Y [1] $ternary$rtl.v:362$66_Y [1] 3'000 }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:462$229:
+      Old ports: A={ 4'0000 \reg30 [0] }, B={ \reg44 [1] \reg44 [1] 1'0 \reg44 [1:0] }, Y=$auto$wreduce.cc:461:run$1466 [4:0]
+      New ports: A={ 1'0 \reg30 [0] }, B=\reg44 [1:0], Y=$auto$wreduce.cc:461:run$1466 [1:0]
+      New connections: $auto$wreduce.cc:461:run$1466 [4:2] = { $auto$wreduce.cc:461:run$1466 [1] $auto$wreduce.cc:461:run$1466 [1] 1'0 }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:637$515:
+      Old ports: A={ 24'000000000000000000000000 $not$rtl.v:641$513_Y }, B={ 7'1011011 \reg90 17'00000000000000001 }, Y=$ternary$rtl.v:637$515_Y [45:0]
+      New ports: A={ 18'000000000000000000 $not$rtl.v:641$513_Y }, B={ 1'1 \reg90 17'00000000000000001 }, Y=$ternary$rtl.v:637$515_Y [39:0]
+      New connections: $ternary$rtl.v:637$515_Y [45:40] = { $ternary$rtl.v:637$515_Y [39] 1'0 $ternary$rtl.v:637$515_Y [39] $ternary$rtl.v:637$515_Y [39] 1'0 $ternary$rtl.v:637$515_Y [39] }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:709$598:
+      Old ports: A={ 6'000000 \reg30 [0] }, B=7'1000100, Y=$ternary$rtl.v:709$598_Y
+      New ports: A={ 1'0 \reg30 [0] }, B=2'10, Y={ $ternary$rtl.v:709$598_Y [2] $ternary$rtl.v:709$598_Y [0] }
+      New connections: { $ternary$rtl.v:709$598_Y [6:3] $ternary$rtl.v:709$598_Y [1] } = { $ternary$rtl.v:709$598_Y [2] 4'0000 }
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:718$628:
+      Old ports: A={ 5'00000 $auto$wreduce.cc:461:run$1471 [2:0] }, B={ 7'0000000 $auto$rtlil.cc:2399:Not$1617 }, Y=$0\reg130[7:0]
+      New ports: A=$auto$wreduce.cc:461:run$1471 [2:0], B={ 2'00 $auto$rtlil.cc:2399:Not$1617 }, Y=$0\reg130[7:0] [2:0]
+      New connections: $0\reg130[7:0] [7:3] = 5'00000
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:739$655:
+      Old ports: A=8'10100000, B={ 7'0000000 $auto$rtlil.cc:2399:Not$1607 }, Y=$ternary$rtl.v:739$655_Y [7:0]
+      New ports: A=2'10, B={ 1'0 $auto$rtlil.cc:2399:Not$1607 }, Y={ $ternary$rtl.v:739$655_Y [5] $ternary$rtl.v:739$655_Y [0] }
+      New connections: { $ternary$rtl.v:739$655_Y [7:6] $ternary$rtl.v:739$655_Y [4:1] } = { $ternary$rtl.v:739$655_Y [5] 5'00000 }
+  Optimizing cells in module \top.
+Performed a total of 11 changes.
+
+2.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+2.19.6. Executing OPT_SHARE pass.
+
+2.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~14 debug messages>
+
+2.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~45 debug messages>
+
+2.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.19.14. Executing OPT_SHARE pass.
+
+2.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Removing never-active SRST on $auto$ff.cc:266:slice$1367 ($sdff) from module top.
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1311 ($dff) from module top.
+Setting constant 0-bit at position 1 on $auto$ff.cc:266:slice$1687 ($dff) from module top.
+Setting constant 0-bit at position 2 on $auto$ff.cc:266:slice$1687 ($dff) from module top.
+Setting constant 0-bit at position 3 on $auto$ff.cc:266:slice$1687 ($dff) from module top.
+Setting constant 0-bit at position 4 on $auto$ff.cc:266:slice$1687 ($dff) from module top.
+Setting constant 0-bit at position 5 on $auto$ff.cc:266:slice$1687 ($dff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1241 ($dff) from module top.
+Setting constant 0-bit at position 0 on $procdff$1246 ($dff) from module top.
+
+2.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 4 unused cells and 9 unused wires.
+<suppressed ~5 debug messages>
+
+2.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+<suppressed ~5 debug messages>
+
+2.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~44 debug messages>
+
+2.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:720$626:
+      Old ports: A={ 2'00 \forvar86 [0] }, B={ \reg12 [2] 1'0 \reg12 [0] }, Y=$auto$wreduce.cc:461:run$1471 [2:0]
+      New ports: A={ 1'0 \forvar86 [0] }, B={ \reg12 [2] \reg12 [0] }, Y={ $auto$wreduce.cc:461:run$1471 [2] $auto$wreduce.cc:461:run$1471 [0] }
+      New connections: $auto$wreduce.cc:461:run$1471 [1] = 1'0
+  Optimizing cells in module \top.
+    Consolidated identical input bits for $mux cell $ternary$rtl.v:718$628:
+      Old ports: A=$auto$wreduce.cc:461:run$1471 [2:0], B={ 2'00 $auto$rtlil.cc:2399:Not$1617 }, Y=$0\reg130[7:0] [2:0]
+      New ports: A={ $auto$wreduce.cc:461:run$1471 [2] $auto$wreduce.cc:461:run$1471 [0] }, B={ 1'0 $auto$rtlil.cc:2399:Not$1617 }, Y={ $0\reg130[7:0] [2] $0\reg130[7:0] [0] }
+      New connections: $0\reg130[7:0] [1] = 1'0
+  Optimizing cells in module \top.
+Performed a total of 2 changes.
+
+2.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+<suppressed ~6 debug messages>
+Removed a total of 2 cells.
+
+2.19.22. Executing OPT_SHARE pass.
+
+2.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+Setting constant 0-bit at position 0 on $auto$ff.cc:266:slice$1682 ($sdff) from module top.
+Setting constant 0-bit at position 1 on $procdff$1190 ($dff) from module top.
+
+2.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.19.26. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.19.27. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \top..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~44 debug messages>
+
+2.19.28. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \top.
+Performed a total of 0 changes.
+
+2.19.29. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\top'.
+Removed a total of 0 cells.
+
+2.19.30. Executing OPT_SHARE pass.
+
+2.19.31. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.32. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \top..
+
+2.19.33. Executing OPT_EXPR pass (perform const folding).
+Optimizing module top.
+
+2.19.34. Finished OPT passes. (There is nothing left to do.)
+
+2.20. Executing TECHMAP pass (map to technology primitives).
+
+2.20.1. Executing Verilog-2005 frontend: /home/zou/software/yosys/share/techmap.v
+Parsing Verilog input from `/home/zou/software/yosys/share/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+2.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $reduce_and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $reduce_xnor.
+Using extmapper simplemap for cells of type $reduce_xor.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod$e04283ca12514baf3d204c6994bec8f178dd89f8\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdffce.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod$83b5ea7968049d4100fded4ca9321a3c959a2831\_90_alu for cells of type $alu.
+Using template $paramod$constmap:908968c9539fec9a463b3be5a02eff79a2b1a137$paramod$a359a30fb32290708802d43fe2f2825b733eb97e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$7af98a8d3d01ff58dee4212ab52569c379e064a1\_90_alu for cells of type $alu.
+Using template $paramod$b6e9b66803a857d7f4d924b1398730ae3f25daf6\_90_alu for cells of type $alu.
+Using template $paramod$constmap:76b1c934e842bad51b8109cf1cb6d8a75cfcf0d8$paramod$2bf323eafb2fe38fc008e44e06ba2fb8036efab0\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper maccmap for cells of type $macc.
+  add 8'01001000 (8 bits, unsigned)
+  add bits { $auto$wreduce.cc:461:run$1438 [0] $auto$wreduce.cc:461:run$1453 [0] } (2 bits)
+Using template $paramod$8045f2881226ae434b154710c783ad25023f386c\_90_alu for cells of type $alu.
+Using template $paramod$aa43f2dbffadf36a7e9a5a6a61a7417f2989191d\_90_alu for cells of type $alu.
+Using template $paramod$constmap:2b8df946903f5e205ab084287063c7c5d61bdb9d$paramod$3a1207da1c861578d37bdaecc8ab4ce4aef10918\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod$constmap:59b00b0b76c4d4ac54b852a5710f07eacb5e8d66$paramod$ac8c4fc845ef5f1e08823f998e9c5e40b4872fc1\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod$constmap:ccbb8cec0e710944eb3bac085b033d76f377197b$paramod$71db792daf195a39727033b693f0306ddceefdbf\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$constmap:56d49ac9949d2c83b20bb6d1694800acfefc9301$paramod$0fb6940aab1f33a449e3f32ad6f100d4e476203a\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod$6d0f940abeab8f80a021d1bc835c5669ea44a2ad\_90_alu for cells of type $alu.
+Using template $paramod$278a36d055c5eb5dd54e18c2dd3465a641b5b7dc\_90_alu for cells of type $alu.
+Using template $paramod$constmap:815cc7485588a64bc62599a9bada5e51195aa96d$paramod$aad0464c3d73f2a6f46574fc1fefe59b042c8f23\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using template $paramod$76faf6aa397909704a3ca45dba523dfa58393e7e\_90_alu for cells of type $alu.
+Using template $paramod$constmap:17b1f745d2d368cfe2d0acc9c886fa68e9228818$paramod$6d61f9ed67b5b27bd2f669cffd3c6567d752c193\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshl.
+Using template $paramod$215440792383f7884e57d9c95f84e9552d0bf4ac\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $sdff.
+  add { $0\forvar7[11:0] [2:1] 1'0 } * $auto$wreduce.cc:461:run$1444 [0] (3x1 bits, unsigned)
+Using template $paramod$32a7b7b86c07519b7537abc18e96f0331f97914d\_90_alu for cells of type $alu.
+Using template $paramod$constmap:5353cb39bc5310ebf8df7a83c63b1febdf5faae3$paramod$0eefb382312c7227722ce1284278e65e6b41c38f\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using extmapper simplemap for cells of type $dff.
+Using template $paramod$constmap:b78d67560a206bc392f593d3bdda3a9bd5d800dd$paramod$c94eb6c14e3af7fd38a0bb158675cba66904887b\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.
+Using extmapper simplemap for cells of type $xnor.
+Using template $paramod$175e67c02b86e96b1288b9dc100122520d7240d8\_90_alu for cells of type $alu.
+Using template $paramod$53700bbee849b2010ad0b60a61ccd204a10e24ca\_90_alu for cells of type $alu.
+Using template $paramod$484d51534650924b7ed4c69e46eed3a56904771f\_90_alu for cells of type $alu.
+Using template $paramod$19d71cf4a78a3e7142dac3f236c406c8947b8115\_90_alu for cells of type $alu.
+Using template $paramod$constmap:fd24f94caf6dc7a06817ae2463bd46c0d6d1e6eb$paramod$26ab0b76b5013c4bbe65d6625669e26366ceb0da\_90_shift_ops_shr_shl_sshl_sshr for cells of type $sshr.

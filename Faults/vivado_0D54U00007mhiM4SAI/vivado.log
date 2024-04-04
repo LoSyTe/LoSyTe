@@ -1,0 +1,581 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Dec  7 22:21:12 2023
+# Process ID: 3223716
+# Current directory: /home/user/vivado_project
+# Command line: vivado -mode tcl
+# Log file: /home/user/vivado_project/vivado.log
+# Journal file: /home/user/vivado_project/vivado.jou
+# Running On: user-System-Product-Name, OS: Linux, CPU Frequency: 5439.993 MHz, CPU Physical cores: 24, Host memory: 134858 MB
+#-----------------------------------------------------------
+read_verilog rtl.v 
+/home/user/vivado_project/rtl.v
+synth_design -top top
+Command: synth_design -top top
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3227160
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1701.410 ; gain = 416.645 ; free physical = 7422 ; free virtual = 101616
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module120' [/home/user/vivado_project/rtl.v:973]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module125' [/home/user/vivado_project/rtl.v:2091]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module125' (0#1) [/home/user/vivado_project/rtl.v:2091]
+WARNING: [Synth 8-689] width (10) of port connection 'y' does not match port width (1574) of module 'module125' [/home/user/vivado_project/rtl.v:1123]
+WARNING: [Synth 8-689] width (15) of port connection 'wire129' does not match port width (6) of module 'module125' [/home/user/vivado_project/rtl.v:1123]
+WARNING: [Synth 8-689] width (16) of port connection 'wire128' does not match port width (9) of module 'module125' [/home/user/vivado_project/rtl.v:1123]
+WARNING: [Synth 8-689] width (25) of port connection 'wire127' does not match port width (10) of module 'module125' [/home/user/vivado_project/rtl.v:1123]
+WARNING: [Synth 8-689] width (24) of port connection 'wire126' does not match port width (12) of module 'module125' [/home/user/vivado_project/rtl.v:1123]
+INFO: [Synth 8-6157] synthesizing module 'module288' [/home/user/vivado_project/rtl.v:1409]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module288' (0#1) [/home/user/vivado_project/rtl.v:1409]
+WARNING: [Synth 8-689] width (21) of port connection 'wire291' does not match port width (3) of module 'module288' [/home/user/vivado_project/rtl.v:1252]
+WARNING: [Synth 8-689] width (19) of port connection 'y' does not match port width (1732) of module 'module288' [/home/user/vivado_project/rtl.v:1252]
+WARNING: [Synth 8-689] width (17) of port connection 'wire289' does not match port width (11) of module 'module288' [/home/user/vivado_project/rtl.v:1252]
+WARNING: [Synth 8-689] width (24) of port connection 'wire292' does not match port width (6) of module 'module288' [/home/user/vivado_project/rtl.v:1252]
+WARNING: [Synth 8-689] width (9) of port connection 'wire293' does not match port width (3) of module 'module288' [/home/user/vivado_project/rtl.v:1252]
+INFO: [Synth 8-6157] synthesizing module 'module440' [/home/user/vivado_project/rtl.v:1318]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module446' [/home/user/vivado_project/rtl.v:3321]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4528]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4528]
+INFO: [Synth 8-6155] done synthesizing module 'module446' (0#1) [/home/user/vivado_project/rtl.v:3321]
+WARNING: [Synth 8-689] width (17) of port connection 'y' does not match port width (3346) of module 'module446' [/home/user/vivado_project/rtl.v:1358]
+WARNING: [Synth 8-689] width (25) of port connection 'wire448' does not match port width (12) of module 'module446' [/home/user/vivado_project/rtl.v:1358]
+WARNING: [Synth 8-689] width (21) of port connection 'wire447' does not match port width (19) of module 'module446' [/home/user/vivado_project/rtl.v:1358]
+INFO: [Synth 8-6157] synthesizing module 'module705' [/home/user/vivado_project/rtl.v:2828]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:3038]
+INFO: [Synth 8-6155] done synthesizing module 'module705' (0#1) [/home/user/vivado_project/rtl.v:2828]
+WARNING: [Synth 8-689] width (17) of port connection 'y' does not match port width (1218) of module 'module705' [/home/user/vivado_project/rtl.v:1403]
+WARNING: [Synth 8-689] width (21) of port connection 'wire706' does not match port width (6) of module 'module705' [/home/user/vivado_project/rtl.v:1403]
+INFO: [Synth 8-6157] synthesizing module 'module803' [/home/user/vivado_project/rtl.v:2743]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6155] done synthesizing module 'module803' (0#1) [/home/user/vivado_project/rtl.v:2743]
+WARNING: [Synth 8-689] width (12) of port connection 'y' does not match port width (255) of module 'module803' [/home/user/vivado_project/rtl.v:1405]
+WARNING: [Synth 8-689] width (24) of port connection 'wire805' does not match port width (8) of module 'module803' [/home/user/vivado_project/rtl.v:1405]
+WARNING: [Synth 8-689] width (17) of port connection 'wire804' does not match port width (8) of module 'module803' [/home/user/vivado_project/rtl.v:1405]
+INFO: [Synth 8-6155] done synthesizing module 'module440' (0#1) [/home/user/vivado_project/rtl.v:1318]
+WARNING: [Synth 8-689] width (24) of port connection 'y' does not match port width (219) of module 'module440' [/home/user/vivado_project/rtl.v:1279]
+WARNING: [Synth 8-689] width (24) of port connection 'wire443' does not match port width (16) of module 'module440' [/home/user/vivado_project/rtl.v:1279]
+WARNING: [Synth 8-689] width (24) of port connection 'wire442' does not match port width (21) of module 'module440' [/home/user/vivado_project/rtl.v:1279]
+INFO: [Synth 8-6155] done synthesizing module 'module120' (0#1) [/home/user/vivado_project/rtl.v:973]
+WARNING: [Synth 8-689] width (23) of port connection 'wire123' does not match port width (16) of module 'module120' [/home/user/vivado_project/rtl.v:756]
+WARNING: [Synth 8-689] width (21) of port connection 'y' does not match port width (1019) of module 'module120' [/home/user/vivado_project/rtl.v:756]
+WARNING: [Synth 8-689] width (17) of port connection 'wire121' does not match port width (15) of module 'module120' [/home/user/vivado_project/rtl.v:756]
+WARNING: [Synth 8-689] width (21) of port connection 'wire129' does not match port width (6) of module 'module125' [/home/user/vivado_project/rtl.v:964]
+WARNING: [Synth 8-689] width (7) of port connection 'y' does not match port width (1574) of module 'module125' [/home/user/vivado_project/rtl.v:964]
+WARNING: [Synth 8-689] width (19) of port connection 'wire127' does not match port width (10) of module 'module125' [/home/user/vivado_project/rtl.v:964]
+WARNING: [Synth 8-689] width (23) of port connection 'wire126' does not match port width (12) of module 'module125' [/home/user/vivado_project/rtl.v:964]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-6014] Unused sequential element reg229_reg was removed.  [/home/user/vivado_project/rtl.v:2225]
+WARNING: [Synth 8-6014] Unused sequential element reg235_reg was removed.  [/home/user/vivado_project/rtl.v:2222]
+WARNING: [Synth 8-6014] Unused sequential element reg237_reg was removed.  [/home/user/vivado_project/rtl.v:2221]
+WARNING: [Synth 8-6014] Unused sequential element reg418_reg was removed.  [/home/user/vivado_project/rtl.v:1560]
+WARNING: [Synth 8-6014] Unused sequential element reg688_reg was removed.  [/home/user/vivado_project/rtl.v:3599]
+WARNING: [Synth 8-6014] Unused sequential element reg693_reg was removed.  [/home/user/vivado_project/rtl.v:3596]
+WARNING: [Synth 8-6014] Unused sequential element reg690_reg was removed.  [/home/user/vivado_project/rtl.v:3598]
+WARNING: [Synth 8-3917] design top has port y[2275] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2274] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2273] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2272] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2271] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2270] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2269] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2268] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2061] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2060] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2059] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2058] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2057] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2056] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2055] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2054] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2053] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2052] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2051] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2050] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2049] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2048] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2047] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2046] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2045] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2044] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2043] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2042] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2041] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2040] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2039] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2038] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2037] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2036] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2035] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1537] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1252] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1251] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1250] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1249] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1085] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1081] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1080] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1079] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1078] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[1077] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1060] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1059] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1058] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1057] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1056] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1055] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1054] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1053] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1052] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1051] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1050] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1049] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[1040] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1039] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[1038] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[1037] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1036] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1035] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1034] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1033] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1032] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1031] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1030] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1029] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1028] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1027] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1026] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1025] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1024] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1023] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1022] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1021] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1020] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1019] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1018] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1017] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1016] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[1015] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[990] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[989] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[988] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[987] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[986] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[985] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[984] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[983] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[982] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[981] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[980] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[979] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[978] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[977] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[976] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[975] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port wire807[20] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[19] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[18] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[17] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[16] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[15] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[14] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[13] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[12] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[11] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[10] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[9] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[8] in module module803 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire807[6] in module module803 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1835.379 ; gain = 550.613 ; free physical = 6979 ; free virtual = 101183
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1853.191 ; gain = 568.426 ; free physical = 6919 ; free virtual = 101123
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1861.195 ; gain = 576.430 ; free physical = 6893 ; free virtual = 101097
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'forvar140' [/home/user/vivado_project/rtl.v:2332]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar132' [/home/user/vivado_project/rtl.v:2329]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar156' [/home/user/vivado_project/rtl.v:2322]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar168' [/home/user/vivado_project/rtl.v:2312]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar170' [/home/user/vivado_project/rtl.v:2311]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar208' [/home/user/vivado_project/rtl.v:2286]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar218' [/home/user/vivado_project/rtl.v:2282]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar222' [/home/user/vivado_project/rtl.v:2278]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar219' [/home/user/vivado_project/rtl.v:2275]
+WARNING: [Synth 8-5577] Initial value set on signal reg306 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:1473]
+WARNING: [Synth 8-5577] Initial value set on signal reg323 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:1464]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar364' [/home/user/vivado_project/rtl.v:1651]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar369' [/home/user/vivado_project/rtl.v:1648]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar409' [/home/user/vivado_project/rtl.v:1622]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar453' [/home/user/vivado_project/rtl.v:3830]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar493' [/home/user/vivado_project/rtl.v:3807]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar572' [/home/user/vivado_project/rtl.v:3768]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar579' [/home/user/vivado_project/rtl.v:3763]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar588' [/home/user/vivado_project/rtl.v:3758]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar596' [/home/user/vivado_project/rtl.v:3754]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar604' [/home/user/vivado_project/rtl.v:3748]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar608' [/home/user/vivado_project/rtl.v:3747]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar649' [/home/user/vivado_project/rtl.v:3732]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar652' [/home/user/vivado_project/rtl.v:3730]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar681' [/home/user/vivado_project/rtl.v:3713]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar683' [/home/user/vivado_project/rtl.v:3711]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar692' [/home/user/vivado_project/rtl.v:3707]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar675' [/home/user/vivado_project/rtl.v:3706]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar679' [/home/user/vivado_project/rtl.v:3705]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar771' [/home/user/vivado_project/rtl.v:2991]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar253' [/home/user/vivado_project/rtl.v:1118]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar257' [/home/user/vivado_project/rtl.v:1115]
+WARNING: [Synth 8-5577] Initial value set on signal reg37 is ignored as its size does not match that of the signal. Simulation mismatch may occur. [/home/user/vivado_project/rtl.v:41]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar9' [/home/user/vivado_project/rtl.v:364]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar18' [/home/user/vivado_project/rtl.v:363]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar24' [/home/user/vivado_project/rtl.v:361]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar15' [/home/user/vivado_project/rtl.v:357]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar89' [/home/user/vivado_project/rtl.v:325]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar847' [/home/user/vivado_project/rtl.v:306]
+WARNING: [Synth 8-327] inferring latch for variable 'forvar866' [/home/user/vivado_project/rtl.v:301]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1977.672 ; gain = 692.906 ; free physical = 7855 ; free virtual = 102066
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   25 Bit       Adders := 8     
+	   3 Input   25 Bit       Adders := 3     
+	   3 Input   24 Bit       Adders := 1     
+	   2 Input   24 Bit       Adders := 4     
+	   2 Input   23 Bit       Adders := 1     
+	   3 Input   23 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 4     
+	   2 Input   20 Bit       Adders := 2     
+	   2 Input   19 Bit       Adders := 4     
+	   3 Input   19 Bit       Adders := 2     
+	   2 Input   18 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 4     
+	   2 Input   15 Bit       Adders := 3     
+	   3 Input   15 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 4     
+	   2 Input   13 Bit       Adders := 2     
+	   3 Input   13 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 2     
+	   4 Input   11 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   3 Input   10 Bit       Adders := 3     
+	   2 Input   10 Bit       Adders := 1     
+	   3 Input    9 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   3 Input    7 Bit       Adders := 2     
+	   2 Input    6 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
+	   3 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 5     
+	   3 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     25 Bit         XORs := 6     
+	   2 Input     24 Bit         XORs := 9     
+	   2 Input     23 Bit         XORs := 5     
+	   2 Input     22 Bit         XORs := 2     
+	   2 Input     21 Bit         XORs := 4     
+	   2 Input     20 Bit         XORs := 1     
+	   3 Input     20 Bit         XORs := 1     
+	   2 Input     19 Bit         XORs := 15    
+	   2 Input     18 Bit         XORs := 6     
+	   2 Input     17 Bit         XORs := 4     
+	   2 Input     16 Bit         XORs := 7     
+	   2 Input     15 Bit         XORs := 3     
+	   2 Input     14 Bit         XORs := 3     
+	   2 Input     13 Bit         XORs := 3     
+	   2 Input     12 Bit         XORs := 2     
+	   2 Input     11 Bit         XORs := 2     
+	   2 Input     10 Bit         XORs := 2     
+	   2 Input      9 Bit         XORs := 2     
+	   2 Input      8 Bit         XORs := 3     
+	   2 Input      7 Bit         XORs := 4     
+	   2 Input      6 Bit         XORs := 3     
+	   2 Input      5 Bit         XORs := 1     
+	   2 Input      4 Bit         XORs := 4     
+	   2 Input      3 Bit         XORs := 10    
+	   2 Input      2 Bit         XORs := 1     
++---XORs : 
+	               38 Bit    Wide XORs := 1     
+	               35 Bit    Wide XORs := 1     
+	               33 Bit    Wide XORs := 1     
+	               32 Bit    Wide XORs := 1     
+	               25 Bit    Wide XORs := 9     
+	               24 Bit    Wide XORs := 6     
+	               23 Bit    Wide XORs := 6     
+	               22 Bit    Wide XORs := 7     
+	               21 Bit    Wide XORs := 5     
+	               20 Bit    Wide XORs := 3     
+	               19 Bit    Wide XORs := 8     
+	               18 Bit    Wide XORs := 3     
+	               17 Bit    Wide XORs := 4     
+	               16 Bit    Wide XORs := 6     
+	               14 Bit    Wide XORs := 3     
+	               13 Bit    Wide XORs := 5     
+	               12 Bit    Wide XORs := 9     
+	               11 Bit    Wide XORs := 5     
+	               10 Bit    Wide XORs := 2     
+	                9 Bit    Wide XORs := 9     
+	                8 Bit    Wide XORs := 4     
+	                7 Bit    Wide XORs := 2     
+	                6 Bit    Wide XORs := 4     
+	                5 Bit    Wide XORs := 4     
+	                4 Bit    Wide XORs := 8     
+	                3 Bit    Wide XORs := 13    
+	                2 Bit    Wide XORs := 6     
+	                1 Bit    Wide XORs := 18    
++---Registers : 
+	               25 Bit    Registers := 32    
+	               24 Bit    Registers := 29    
+	               23 Bit    Registers := 28    
+	               22 Bit    Registers := 15    
+	               21 Bit    Registers := 17    
+	               20 Bit    Registers := 17    
+	               19 Bit    Registers := 22    
+	               18 Bit    Registers := 25    
+	               17 Bit    Registers := 21    
+	               16 Bit    Registers := 37    
+	               15 Bit    Registers := 31    
+	               14 Bit    Registers := 22    
+	               13 Bit    Registers := 27    
+	               12 Bit    Registers := 26    
+	               11 Bit    Registers := 13    
+	               10 Bit    Registers := 22    
+	                9 Bit    Registers := 33    
+	                8 Bit    Registers := 34    
+	                7 Bit    Registers := 20    
+	                6 Bit    Registers := 20    
+	                5 Bit    Registers := 28    
+	                4 Bit    Registers := 22    
+	                3 Bit    Registers := 41    
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 59    
++---Multipliers : 
+	              12x23  Multipliers := 1     
+	               1x23  Multipliers := 1     
+	               8x13  Multipliers := 1     
+	               1x21  Multipliers := 1     
+	              13x20  Multipliers := 1     
+	               1x19  Multipliers := 1     
+	               2x16  Multipliers := 1     
+	               5x15  Multipliers := 1     
+	               1x17  Multipliers := 2     
+	                6x8  Multipliers := 1     
+	               1x15  Multipliers := 2     
+	              14x14  Multipliers := 1     
+	               1x13  Multipliers := 1     
+	              13x13  Multipliers := 2     
+	               4x13  Multipliers := 1     
+	               5x13  Multipliers := 1     
+	               8x11  Multipliers := 1     
+	               7x11  Multipliers := 1     
+	               1x11  Multipliers := 1     
+	               6x10  Multipliers := 1     
+	                1x9  Multipliers := 1     
+	                9x9  Multipliers := 1     
+	                1x8  Multipliers := 2     
+	                2x6  Multipliers := 1     
+	                1x5  Multipliers := 1     
+	                1x2  Multipliers := 1     
+	                1x3  Multipliers := 2     
++---Muxes : 
+	   2 Input   55 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 4     
+	   2 Input   28 Bit        Muxes := 3     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   25 Bit        Muxes := 61    
+	   3 Input   25 Bit        Muxes := 2     
+	   2 Input   24 Bit        Muxes := 46    
+	   4 Input   24 Bit        Muxes := 3     
+	   3 Input   24 Bit        Muxes := 1     
+	   2 Input   23 Bit        Muxes := 38    
+	   3 Input   23 Bit        Muxes := 4     
+	   2 Input   22 Bit        Muxes := 25    
+	   2 Input   21 Bit        Muxes := 36    
+	   2 Input   20 Bit        Muxes := 20    
+	   2 Input   19 Bit        Muxes := 44    
+	   4 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 22    
+	   2 Input   17 Bit        Muxes := 27    
+	   3 Input   17 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 62    
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   15 Bit        Muxes := 45    
+	   3 Input   15 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 31    
+	   4 Input   14 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 42    
+	   3 Input   13 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 45    
+	   4 Input   12 Bit        Muxes := 1     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 13    
+	   2 Input   10 Bit        Muxes := 37    
+	   2 Input    9 Bit        Muxes := 60    
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 53    
+	   3 Input    8 Bit        Muxes := 3     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 30    
+	   3 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 44    
+	   4 Input    6 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 41    
+	   3 Input    5 Bit        Muxes := 3     
+	   4 Input    5 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 45    
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 66    
+	   2 Input    2 Bit        Muxes := 31    
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 86    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3332] Sequential element (forvar453) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar453__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__8) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar493__9) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar572) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar572__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar572__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar572__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__8) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__9) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__10) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__11) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__12) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__13) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__14) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__15) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__16) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__17) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__18) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__19) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__20) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__21) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar579__22) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar588) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar588__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar588__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar588__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar596__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar604__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__8) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__9) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__10) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__11) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar608__12) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__8) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar649__9) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__0) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__1) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__2) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__3) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__4) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__5) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__6) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__7) is unused and will be removed from module module446.
+WARNING: [Synth 8-3332] Sequential element (forvar652__8) is unused and will be removed from module module446.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.

@@ -1,0 +1,306 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Dec  7 22:04:05 2023
+# Process ID: 3124090
+# Current directory: /home/user/vivado_project
+# Command line: vivado -mode tcl
+# Log file: /home/user/vivado_project/vivado.log
+# Journal file: /home/user/vivado_project/vivado.jou
+# Running On: user-System-Product-Name, OS: Linux, CPU Frequency: 5500.000 MHz, CPU Physical cores: 24, Host memory: 134858 MB
+#-----------------------------------------------------------
+read_verilog rtl.v 
+/home/user/vivado_project/rtl.v
+synth_design -top top
+Command: synth_design -top top
+Starting synth_design
+Using part: xc7k70tfbv676-1
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3125460
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1701.625 ; gain = 415.648 ; free physical = 9983 ; free virtual = 103062
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module51' [/home/user/vivado_project/rtl.v:1817]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-6090] variable 'reg120' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:2262]
+WARNING: [Synth 8-6090] variable 'reg120' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:2272]
+INFO: [Synth 8-6157] synthesizing module 'module159' [/home/user/vivado_project/rtl.v:3532]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3971]
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3977]
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3971]
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3977]
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3971]
+WARNING: [Synth 8-6090] variable 'reg209' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3977]
+WARNING: [Synth 8-6090] variable 'reg239' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4059]
+WARNING: [Synth 8-6090] variable 'reg239' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4064]
+WARNING: [Synth 8-6090] variable 'reg251' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4086]
+WARNING: [Synth 8-6090] variable 'reg251' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4094]
+WARNING: [Synth 8-6090] variable 'reg239' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4059]
+WARNING: [Synth 8-6090] variable 'reg239' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4064]
+WARNING: [Synth 8-6090] variable 'reg251' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4086]
+WARNING: [Synth 8-6090] variable 'reg251' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4094]
+WARNING: [Synth 8-6090] variable 'reg285' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4197]
+WARNING: [Synth 8-6090] variable 'reg286' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4198]
+WARNING: [Synth 8-6090] variable 'reg285' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4206]
+WARNING: [Synth 8-6090] variable 'reg286' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4207]
+WARNING: [Synth 8-6090] variable 'reg299' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4236]
+WARNING: [Synth 8-6090] variable 'reg300' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4237]
+WARNING: [Synth 8-6090] variable 'reg299' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4243]
+WARNING: [Synth 8-6090] variable 'reg300' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4244]
+WARNING: [Synth 8-6090] variable 'reg299' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4236]
+WARNING: [Synth 8-6090] variable 'reg300' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4237]
+WARNING: [Synth 8-6090] variable 'reg299' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4243]
+WARNING: [Synth 8-6090] variable 'reg300' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4244]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4302]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4302]
+WARNING: [Synth 8-6090] variable 'reg318' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4304]
+WARNING: [Synth 8-6090] variable 'reg318' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4313]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4302]
+WARNING: [Synth 8-6090] variable 'reg318' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4304]
+WARNING: [Synth 8-6090] variable 'reg318' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4313]
+INFO: [Synth 8-6155] done synthesizing module 'module159' (0#1) [/home/user/vivado_project/rtl.v:3532]
+WARNING: [Synth 8-689] width (8) of port connection 'y' does not match port width (1735) of module 'module159' [/home/user/vivado_project/rtl.v:2436]
+INFO: [Synth 8-6157] synthesizing module 'module326' [/home/user/vivado_project/rtl.v:2507]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-6090] variable 'reg423' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3199]
+WARNING: [Synth 8-6090] variable 'reg424' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3203]
+WARNING: [Synth 8-6090] variable 'reg423' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3215]
+WARNING: [Synth 8-6090] variable 'reg424' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3216]
+WARNING: [Synth 8-6090] variable 'reg437' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3244]
+WARNING: [Synth 8-6090] variable 'reg437' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3250]
+WARNING: [Synth 8-6090] variable 'reg443' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3265]
+WARNING: [Synth 8-6090] variable 'reg443' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:3272]
+INFO: [Synth 8-6155] done synthesizing module 'module326' (0#1) [/home/user/vivado_project/rtl.v:2507]
+WARNING: [Synth 8-689] width (16) of port connection 'wire327' does not match port width (11) of module 'module326' [/home/user/vivado_project/rtl.v:2437]
+WARNING: [Synth 8-689] width (14) of port connection 'wire329' does not match port width (11) of module 'module326' [/home/user/vivado_project/rtl.v:2437]
+WARNING: [Synth 8-689] width (15) of port connection 'wire330' does not match port width (9) of module 'module326' [/home/user/vivado_project/rtl.v:2437]
+WARNING: [Synth 8-689] width (13) of port connection 'y' does not match port width (2202) of module 'module326' [/home/user/vivado_project/rtl.v:2437]
+WARNING: [Synth 8-689] width (13) of port connection 'wire331' does not match port width (10) of module 'module326' [/home/user/vivado_project/rtl.v:2437]
+INFO: [Synth 8-6155] done synthesizing module 'module51' (0#1) [/home/user/vivado_project/rtl.v:1817]
+WARNING: [Synth 8-689] width (15) of port connection 'y' does not match port width (1651) of module 'module51' [/home/user/vivado_project/rtl.v:594]
+WARNING: [Synth 8-689] width (10) of port connection 'wire54' does not match port width (4) of module 'module51' [/home/user/vivado_project/rtl.v:594]
+WARNING: [Synth 8-689] width (22) of port connection 'wire55' does not match port width (18) of module 'module51' [/home/user/vivado_project/rtl.v:594]
+WARNING: [Synth 8-6090] variable 'reg589' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:720]
+WARNING: [Synth 8-6090] variable 'reg590' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:721]
+WARNING: [Synth 8-6090] variable 'reg589' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:726]
+WARNING: [Synth 8-6090] variable 'reg590' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:727]
+INFO: [Synth 8-6157] synthesizing module 'module615' [/home/user/vivado_project/rtl.v:1163]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'module708' [/home/user/vivado_project/rtl.v:4322]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4689]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4689]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:4689]
+WARNING: [Synth 8-6090] variable 'reg781' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4741]
+WARNING: [Synth 8-6090] variable 'reg782' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4743]
+WARNING: [Synth 8-6090] variable 'reg781' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4747]
+WARNING: [Synth 8-6090] variable 'reg782' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:4748]
+INFO: [Synth 8-6155] done synthesizing module 'module708' (0#1) [/home/user/vivado_project/rtl.v:4322]
+WARNING: [Synth 8-689] width (8) of port connection 'y' does not match port width (1222) of module 'module708' [/home/user/vivado_project/rtl.v:1695]
+WARNING: [Synth 8-689] width (8) of port connection 'wire712' does not match port width (3) of module 'module708' [/home/user/vivado_project/rtl.v:1695]
+WARNING: [Synth 8-6090] variable 'reg816' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1711]
+WARNING: [Synth 8-6090] variable 'reg816' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1716]
+INFO: [Synth 8-6155] done synthesizing module 'module615' (0#1) [/home/user/vivado_project/rtl.v:1163]
+WARNING: [Synth 8-689] width (16) of port connection 'y' does not match port width (1289) of module 'module615' [/home/user/vivado_project/rtl.v:785]
+WARNING: [Synth 8-689] width (20) of port connection 'wire618' does not match port width (8) of module 'module615' [/home/user/vivado_project/rtl.v:785]
+WARNING: [Synth 8-689] width (18) of port connection 'wire616' does not match port width (10) of module 'module615' [/home/user/vivado_project/rtl.v:785]
+WARNING: [Synth 8-689] width (17) of port connection 'wire619' does not match port width (7) of module 'module615' [/home/user/vivado_project/rtl.v:785]
+WARNING: [Synth 8-689] width (20) of port connection 'wire617' does not match port width (16) of module 'module615' [/home/user/vivado_project/rtl.v:785]
+WARNING: [Synth 8-451] negative shift count is treated as unsigned [/home/user/vivado_project/rtl.v:901]
+WARNING: [Synth 8-689] width (22) of port connection 'y' does not match port width (1222) of module 'module708' [/home/user/vivado_project/rtl.v:913]
+WARNING: [Synth 8-689] width (10) of port connection 'wire712' does not match port width (3) of module 'module708' [/home/user/vivado_project/rtl.v:913]
+WARNING: [Synth 8-689] width (10) of port connection 'wire710' does not match port width (9) of module 'module708' [/home/user/vivado_project/rtl.v:913]
+WARNING: [Synth 8-689] width (22) of port connection 'wire329' does not match port width (11) of module 'module326' [/home/user/vivado_project/rtl.v:975]
+WARNING: [Synth 8-689] width (10) of port connection 'wire330' does not match port width (9) of module 'module326' [/home/user/vivado_project/rtl.v:975]
+WARNING: [Synth 8-689] width (19) of port connection 'y' does not match port width (2202) of module 'module326' [/home/user/vivado_project/rtl.v:975]
+WARNING: [Synth 8-6090] variable 'reg915' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:983]
+WARNING: [Synth 8-6090] variable 'reg915' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:993]
+WARNING: [Synth 8-6090] variable 'reg915' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:983]
+WARNING: [Synth 8-6090] variable 'reg915' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:993]
+WARNING: [Synth 8-6090] variable 'reg939' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1091]
+WARNING: [Synth 8-6090] variable 'reg939' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1105]
+WARNING: [Synth 8-6090] variable 'reg939' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1091]
+WARNING: [Synth 8-6090] variable 'reg939' is written by both blocking and non-blocking assignments, entire logic could be removed [/home/user/vivado_project/rtl.v:1105]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/user/vivado_project/rtl.v:1]
+WARNING: [Synth 8-6014] Unused sequential element reg312_reg was removed.  [/home/user/vivado_project/rtl.v:3710]
+WARNING: [Synth 8-6014] Unused sequential element reg313_reg was removed.  [/home/user/vivado_project/rtl.v:3709]
+WARNING: [Synth 8-6014] Unused sequential element reg314_reg was removed.  [/home/user/vivado_project/rtl.v:3708]
+WARNING: [Synth 8-6014] Unused sequential element reg315_reg was removed.  [/home/user/vivado_project/rtl.v:3707]
+WARNING: [Synth 8-6014] Unused sequential element reg316_reg was removed.  [/home/user/vivado_project/rtl.v:3706]
+WARNING: [Synth 8-6014] Unused sequential element reg317_reg was removed.  [/home/user/vivado_project/rtl.v:3705]
+WARNING: [Synth 8-6014] Unused sequential element reg318_reg was removed.  [/home/user/vivado_project/rtl.v:3704]
+WARNING: [Synth 8-6014] Unused sequential element reg319_reg was removed.  [/home/user/vivado_project/rtl.v:3703]
+WARNING: [Synth 8-6014] Unused sequential element reg320_reg was removed.  [/home/user/vivado_project/rtl.v:3702]
+WARNING: [Synth 8-6014] Unused sequential element reg520_reg was removed.  [/home/user/vivado_project/rtl.v:2729]
+WARNING: [Synth 8-6014] Unused sequential element reg522_reg was removed.  [/home/user/vivado_project/rtl.v:2731]
+WARNING: [Synth 8-6014] Unused sequential element reg523_reg was removed.  [/home/user/vivado_project/rtl.v:2730]
+WARNING: [Synth 8-6014] Unused sequential element reg524_reg was removed.  [/home/user/vivado_project/rtl.v:2727]
+WARNING: [Synth 8-6014] Unused sequential element reg525_reg was removed.  [/home/user/vivado_project/rtl.v:2726]
+WARNING: [Synth 8-6014] Unused sequential element reg526_reg was removed.  [/home/user/vivado_project/rtl.v:2725]
+WARNING: [Synth 8-6014] Unused sequential element reg527_reg was removed.  [/home/user/vivado_project/rtl.v:2724]
+WARNING: [Synth 8-6014] Unused sequential element reg529_reg was removed.  [/home/user/vivado_project/rtl.v:2722]
+WARNING: [Synth 8-6014] Unused sequential element reg550_reg was removed.  [/home/user/vivado_project/rtl.v:1960]
+WARNING: [Synth 8-6014] Unused sequential element reg551_reg was removed.  [/home/user/vivado_project/rtl.v:1959]
+WARNING: [Synth 8-6014] Unused sequential element reg552_reg was removed.  [/home/user/vivado_project/rtl.v:1958]
+WARNING: [Synth 8-6014] Unused sequential element reg553_reg was removed.  [/home/user/vivado_project/rtl.v:1957]
+WARNING: [Synth 8-6014] Unused sequential element reg803_reg was removed.  [/home/user/vivado_project/rtl.v:4433]
+WARNING: [Synth 8-6014] Unused sequential element reg804_reg was removed.  [/home/user/vivado_project/rtl.v:4432]
+WARNING: [Synth 8-6014] Unused sequential element reg805_reg was removed.  [/home/user/vivado_project/rtl.v:4431]
+WARNING: [Synth 8-6014] Unused sequential element reg832_reg was removed.  [/home/user/vivado_project/rtl.v:1303]
+WARNING: [Synth 8-6014] Unused sequential element reg833_reg was removed.  [/home/user/vivado_project/rtl.v:1302]
+WARNING: [Synth 8-6014] Unused sequential element reg834_reg was removed.  [/home/user/vivado_project/rtl.v:1301]
+WARNING: [Synth 8-6014] Unused sequential element reg835_reg was removed.  [/home/user/vivado_project/rtl.v:1299]
+WARNING: [Synth 8-6014] Unused sequential element reg836_reg was removed.  [/home/user/vivado_project/rtl.v:1298]
+WARNING: [Synth 8-6014] Unused sequential element reg839_reg was removed.  [/home/user/vivado_project/rtl.v:1295]
+WARNING: [Synth 8-6014] Unused sequential element reg840_reg was removed.  [/home/user/vivado_project/rtl.v:1294]
+WARNING: [Synth 8-6014] Unused sequential element reg888_reg was removed.  [/home/user/vivado_project/rtl.v:438]
+WARNING: [Synth 8-3848] Net forvar845 in module/entity top does not have driver. [/home/user/vivado_project/rtl.v:85]
+WARNING: [Synth 8-3848] Net forvar851 in module/entity top does not have driver. [/home/user/vivado_project/rtl.v:83]
+WARNING: [Synth 8-3917] design top has port y[2725] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2724] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2723] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2722] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2721] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2642] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2641] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2640] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2639] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2638] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2637] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2636] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2635] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2588] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2587] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2586] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2585] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2584] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2583] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2582] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2581] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2580] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2579] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2578] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2577] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2576] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2575] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2574] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2573] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2572] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2571] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2570] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2569] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2568] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2567] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2566] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2339] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2338] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2337] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2336] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2335] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2334] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2333] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2332] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2331] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2330] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2329] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2328] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2327] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2326] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2325] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2324] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2323] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2322] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2299] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2298] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2297] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2296] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2295] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2294] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2293] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2292] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2291] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2290] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2289] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2288] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2272] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2271] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2270] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2269] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2268] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2267] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2266] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2265] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2264] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2263] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2262] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2261] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2260] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2259] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2258] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2257] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2256] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2255] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2195] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2194] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2193] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2192] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2191] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2190] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2189] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2188] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2187] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2186] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2185] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2184] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2183] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2182] driven by constant 1
+WARNING: [Synth 8-3917] design top has port y[2181] driven by constant 0
+WARNING: [Synth 8-3917] design top has port y[2147] driven by constant 0
+INFO: [Common 17-14] Message 'Synth 8-3917' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7129] Port wire52[19] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[18] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[17] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[16] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[15] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[2] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[1] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire52[0] in module module51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1988] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1987] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1986] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1985] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1984] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1983] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port y[1982] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[18] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[17] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[16] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[15] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[14] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[13] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[12] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[11] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[10] in module top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wire1[9] in module top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1806.594 ; gain = 520.617 ; free physical = 9490 ; free virtual = 102572
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1824.406 ; gain = 538.430 ; free physical = 9441 ; free virtual = 102523
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbv676-1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1832.410 ; gain = 546.434 ; free physical = 9440 ; free virtual = 102522
+---------------------------------------------------------------------------------
