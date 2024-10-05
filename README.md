@@ -1,4 +1,4 @@
-# DeLoSo
+# LoSyTe
 ## [Logic Synthesis Tools Testing via Configuration Diversification with Combinatorial Multi-Armed Bandit](https://github.com/LoSyTe/LoSyTe)
 **The logic synthesis tools we tested include:**
 1. **Commercial Logic Synthesis Tool Vivado (latest version 2023.1 and 2023.2)**
